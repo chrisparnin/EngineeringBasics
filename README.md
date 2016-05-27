@@ -58,6 +58,7 @@ Install the following using brew/choco:
 
 * Node
 * Python (version 2)
+* Pip
 * Java 1.8 (JDK)
 * Maven
 
