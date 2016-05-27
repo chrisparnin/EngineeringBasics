@@ -83,7 +83,7 @@ Let's put your development environment to the test. See if you can build the fol
 
 ```bash
 git clone https://github.com/alt-code/TaskLights
-cd src
+cd TaskLights/src
 npm install
 ```
 
