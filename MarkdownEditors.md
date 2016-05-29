@@ -1,10 +1,15 @@
+# Markdown
+
+Is a plain text format that can be used to express basic 
+
 ```
 ### Header (like <h3>Header</h3>)
 
-Paragraphs are separated by a blank line.
+Paragraphs are separated by a blank line.  A hard break can be created by adding two spaces after a sentance.
 
-2nd paragraph. *Italic*, **bold**, and `monospace` (inline code). Itemized lists
-look like:
+2nd paragraph. *Italic*, **bold**, and `monospace` (inline code). 
+
+Itemized lists look like:
 
   * this one
   * that one
@@ -12,6 +17,10 @@ look like:
 
 > Block quotes are
 > written like so.
+
+Hrefs have an anchor in brackets [] and (link in parens): [Markdown format](https://daringfireball.net/projects/markdown/)
+
+Embedded Image: ![img](http://jsforcats.com/images/customers3.png)
 
 Code (`inline code`):
 
