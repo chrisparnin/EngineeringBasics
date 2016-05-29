@@ -6,13 +6,6 @@ In this workshop, you will setup several tools, programming languages, libraries
 
 The primary goal of the workshop is for you have to have setup a set of relevant tools for software development and data analysis.
 
-## Configuration Management
-
-To help us get started, we will we install some tools that make it a little easier to configure systems.
-
-The advantage of having these tools is that it makes it easier to install large bundles of software, often automatically. These allows others to easily build software without worrying about missing a dependency.
-
-
 
 ## Markdown and GitHub Issues
 
