@@ -1,8 +1,8 @@
 # Markdown
 
-Is a plain text format that can be used to express stylized text rendered as html (or even pdf). It is commonly used in online tools such as Github to make it easier to write reports or documentation.
+Is a plain text format that can be used to express stylized text rendered as html (or even pdf). It is commonly used in online tools such as Github to make it easier to write reports or documentation. You can mix and match html with markdown, but there are limits, e.g. including a link to a css file.
 
-So the following markdown syntax, would appear as follows:
+How about an example. The following markdown syntax, would appear as follows:
 
 ```
 ##### Example Header (like \<h5\>Header\</h5\>)
@@ -73,4 +73,30 @@ n = 50 # We want to find prime numbers between 2 and 50
 
 print sorted(set(range(2,n+1)).difference(set((p * f) for p in range(2,int(n**0.5) + 2) for f in range(2,(n/p)+1))))
 ```
+
+### Tables
+
+There are many different "flavors" of markdown. [Github-flavored markdown](https://help.github.com/articles/organizing-information-with-tables/) supports "tables". Which can be nice to report data results:
+
+```
+| Parameters     | 5% tfidf scores - 34 nodes | 10 % tfidf score - 34 nodes | original result for 2 GB - 34 nodes |
+| ------------- |:-------------:|:-------------:|:-------------:|
+| Vocabsize | 19529 | 39172 | 262144 |
+| Total Token size for training | 256469820 | 238648536 | 211167796 |
+| Total documents size for training | 209313401 | 209313401 | 7706477 |
+| Total Time | 17 min | 24 min | 33 min |
+| Total used memory     | 3.5 GB | 4.5 GB | 3.1 GB |
+| Memory usage per node | 100 MB | 250 MB | 100 MB |
+| Input per node | 5 GB | 6 GB | 3GB |
+```
+| Parameters     | 5% tfidf scores - 34 nodes | 10 % tfidf score - 34 nodes | original result for 2 GB - 34 nodes |
+| ------------- |:-------------:|:-------------:|:-------------:|
+| Vocabsize | 19529 | 39172 | 262144 |
+| Total Token size for training | 256469820 | 238648536 | 211167796 |
+| Total documents size for training | 209313401 | 209313401 | 7706477 |
+| Total Time | 17 min | 24 min | 33 min |
+| Total used memory     | 3.5 GB | 4.5 GB | 3.1 GB |
+| Memory usage per node | 100 MB | 250 MB | 100 MB |
+| Input per node | 5 GB | 6 GB | 3GB |
+
 
