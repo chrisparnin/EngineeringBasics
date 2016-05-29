@@ -105,6 +105,9 @@ If you're still opening and editing files in Notepad.exe, let's show you a bette
 
 When editing markdown and code scripts, features such as syntax highlighting, autocomplete, and advanced find and replace tools are essential!
 
+![image](https://cloud.githubusercontent.com/assets/742934/15635554/4360c340-25af-11e6-9d9c-c6ffe4b6b5be.png)
+
+
 ##### Markdown editors
 
 * Online: Github's built in editors are great for simple Markdown editing!
