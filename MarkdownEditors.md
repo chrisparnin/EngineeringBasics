@@ -1,3 +1,5 @@
+[Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming) | [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)
+
 # Markdown
 
 Is a plain text format that can be used to express stylized text rendered as html (or even pdf). It is commonly used in online tools such as Github to make it easier to write reports or documentation. You can mix and match html with markdown, but there are limits, e.g. including a link to a css file.
