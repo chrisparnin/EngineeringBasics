@@ -4,7 +4,7 @@
 
 In this workshop, you will setup several tools, programming languages, libraries that will help you get started. You will also practice tools and workflows needed to be productive in data analytics.
 
-The primary goal of the workshop is for you have to have setup a set of relevant tools for software development and data analysis.
+The primary goal of this workshop is for you have to have installed and learned a set of relevant tools for software development and data analytics.
 
 1. [Shells]()  
    Basic overview of unix shells, shell programming, and windows shell tips.
