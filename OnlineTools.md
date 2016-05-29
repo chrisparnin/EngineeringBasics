@@ -34,13 +34,7 @@ High-level goals
 
 ##### A
 
-### Explain Shell
 
-What does `tar -zxvf` do?
-
-http://explainshell.com/explain?cmd=tar+-zxvf
-
-![image](https://cloud.githubusercontent.com/assets/742934/15635713/8fc9cf7e-25b4-11e6-957e-0bb03756b9fb.png)
 
 
 ### Cloud Nine
