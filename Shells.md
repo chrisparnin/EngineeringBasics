@@ -1,8 +1,18 @@
 
 # Shells
 
-If you've hardly used a command line before, you might want to go review this more thorough tutorial:
-http://swcarpentry.github.io/shell-novice/index.html
+A shell is a computing environment where commands can be interpreted, evaluated, and its output displayed (i.e., an instance of a read–eval–print loop (REPL)). A good shell provides access to a rich set of commands and allows simple programming of commands, which can be used to create powerful scripts and tools.
+
+But with great power comes great [bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm). Commands and their options can be terse, inconsistent, and difficult to learn. A steep learning curve often prevents novices from enjoying the eventual payoff.
+
+If you've hardly used a command line environment before, you might want to go review this more thorough tutorial:
+http://swcarpentry.github.io/shell-novice/index.html -- this page is more of a collection of pointers and resources.
+
+### Tips for Windows Users
+
+* Git for Windows provides a BASH emulation used to run Git from the command line. You can run "Git Bash" to get this slightly improved command prompt.
+* Powershell is a new shell for windows.
+* Windows 10 will soon support a native bash shell! Stay tuned.
 
 ### Shell Basics
 
