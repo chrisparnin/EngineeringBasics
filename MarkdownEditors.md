@@ -1,6 +1,6 @@
 # Markdown
 
-Is a plain text format that can be used to express basic 
+Is a plain text format that can be used to express stylized text rendered as html (or even pdf). It is commonly used in online tools such as Github to make it easier to write reports or documentation.
 
 ```
 ### Header (like \<h3\>Header\</h3\>)
