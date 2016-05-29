@@ -112,3 +112,10 @@ When editing markdown and code scripts, features such as syntax highlighting, au
 * Mac: [MacDown](http://macdown.uranusjr.com/)
 * IPad: [ByWord](https://itunes.apple.com/us/app/byword/id482063361?mt=8)
 * Windows: [MarkdownPad 2](http://markdownpad.com/download.html)
+
+##### Code Editors
+
+* [Code](https://code.visualstudio.com/)
+* [Atom](https://atom.io/)
+* [Sublime Text](https://www.sublimetext.com/)
+* ... Send pull request.
