@@ -1,3 +1,10 @@
+
+## Configuration Management
+
+To help us get started, we will we install some tools that make it a little easier to configure systems.
+
+The advantage of having these tools is that it makes it easier to install large bundles of software, often automatically. These allows others to easily build software without worrying about missing a dependency.
+
 ### Package Managers
 
 Package managers are tools for installing libraries and tools, which help manage dependencies and configuration of files and environment variables. 
