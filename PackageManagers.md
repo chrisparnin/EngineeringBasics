@@ -1,5 +1,6 @@
+[Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming) | [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)
 
-## Configuration Management
+# Configuration Management
 
 To help us get started, we will we install some tools that make it a little easier to configure systems.
 
