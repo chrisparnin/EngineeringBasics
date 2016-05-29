@@ -121,4 +121,5 @@ When editing markdown and code scripts, features such as syntax highlighting, au
 * [Code](https://code.visualstudio.com/)
 * [Atom](https://atom.io/)
 * [Sublime Text](https://www.sublimetext.com/)
+* Level up vim: Put some of these stuff in [your vimrc](http://amix.dk/vim/vimrc.html).
 * ... Send pull request.
