@@ -99,4 +99,16 @@ There are many different "flavors" of markdown. [Github-flavored markdown](https
 | Memory usage per node | 100 MB | 250 MB | 100 MB |
 | Input per node | 5 GB | 6 GB | 3GB |
 
+### Editors
 
+If you're still opening and editing files in Notepad.exe, let's show you a better way.
+
+When editing markdown and code scripts, features such as syntax highlighting, autocomplete, and advanced find and replace tools are essential!
+
+##### Markdown editors
+
+* Online: Github's built in editors are great for simple Markdown editing!
+* Online: Also see: http://dillinger.io/
+* Mac: [MacDown](http://macdown.uranusjr.com/)
+* IPad: [ByWord](https://itunes.apple.com/us/app/byword/id482063361?mt=8)
+* Windows: [MarkdownPad 2](http://markdownpad.com/download.html)
