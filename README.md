@@ -1,4 +1,6 @@
-# EngineeringBasics
+| PackageManagers |[Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [GitHub Pages]() | Markdown and Editors
+
+# Engineering Basics
 
 In this workshop, you will setup several tools, programming languages, libraries that will help you get started. You will also practice tools and workflows needed to be productive in data analytics.
 
