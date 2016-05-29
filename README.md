@@ -1,4 +1,4 @@
-[Shells]() | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | Programming with Python/Node | [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md)
+[Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | Programming with Python/Node | [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md)
 
 # Engineering Basics
 
@@ -6,7 +6,7 @@ In this workshop, you will setup several tools, programming languages, libraries
 
 The primary goal of this workshop is for you have to have installed and learned a set of relevant tools for software development and data analytics.
 
-1. [Shells]()  
+1. [Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells)  
    Basic overview of unix shells, shell programming, and windows shell tips.
 2. [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md)  
    Introduction to basic configuration management with package managers.
