@@ -1,4 +1,4 @@
-| [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md) | Markdown and Editors | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) |  [GitHub Pages]() | 
+| [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md) | Markdown and Editors | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) |  [GitHub Pages]() | Programming with Python/Node
 
 # Engineering Basics
 
