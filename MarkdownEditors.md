@@ -3,7 +3,7 @@
 Is a plain text format that can be used to express basic 
 
 ```
-### Header (like <h3>Header</h3>)
+### Header (like \<h3\>Header\</h3\>)
 
 Paragraphs are separated by a blank line.  A hard break can be created by adding two spaces after a sentance.
 
@@ -27,7 +27,7 @@ Code (`inline code`):
     print “Code is just indented four spaces”;
 ```
 
-### Header (like <h3>Header</h3>)
+### Header (like \<h3\>Header\</h3\>)
 
 Paragraphs are separated by a blank line.  A hard break can be created by adding two spaces after a sentance.
 
