@@ -1,4 +1,4 @@
-| PackageManagers |[Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [GitHub Pages]() | Markdown and Editors
+| PackageManagers | Markdown and Editors | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) |  [GitHub Pages]() | 
 
 # Engineering Basics
 
