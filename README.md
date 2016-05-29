@@ -1,4 +1,4 @@
-[Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | Programming with Python/Node | [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md)
+[Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming) | [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)
 
 # Engineering Basics
 
@@ -8,15 +8,15 @@ The primary goal of this workshop is for you have to have installed and learned 
 
 1. [Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells)  
    Basic overview of unix shells, shell programming, and windows shell tips.
-2. [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md)  
+2. [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management)  
    Introduction to basic configuration management with package managers.
 3. [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown)  
    Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown.
 4. [Version Control with Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git)  
    Basic overview of git. Two interactive tutorials for learning commands.
-5. Programming with Python/Node  
+5. [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming)  
    Practice basic programming tasks with python and node.
-6. [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md)  
+6. [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)  
    Github issues and pages, trello boards, cloud nine, and more...
 
 
