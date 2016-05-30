@@ -56,10 +56,17 @@ Instead of saying "Do analysis" => "Find R package for doing peak detection". Th
 
 ### Scrum
 
-We will 
+Scrum is a process for managing tasks. The most popular aspect people use is the daily stand-up meeting. In a daily standup, people report the progress and status of the tasks. The idea is by standing up, you won't try taking too long to talk.
+
+The main things covered in a scrum:
+
+* What I did.
+* What I need to do next.
+* What is blocking me.
+
+We will be using scrums in our research lab. We will have them on Wednesdays at 9:30am.
 
 ## Practice: Brainstorm some tasks for your data challenge
 
 * Add some issues to your data challenge repo.
 * Create a personal trello board for this summer.
-
