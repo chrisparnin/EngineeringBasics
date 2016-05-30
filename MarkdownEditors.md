@@ -126,14 +126,28 @@ When editing markdown and code scripts, features such as syntax highlighting, au
 * Level up vim: Put some of these stuff in [your vimrc](http://amix.dk/vim/vimrc.html).
 * ... Send pull request.
 
-## Practice: Create an About me github page
+## Practice: Create an About me Page
+
+#### Step 1: Create a Markdown Page
+
+Add a AboutMe.md file to your data challenge repo. Include the following details:
+
+* Something about you.
+* Where you are from and your school.
+* A picture.
+* A list of skills
+* A link to your mentor
+* If brave, a table and a favorite code snippet.
+
+#### Step 2: gh-pages
 
 * Create a branch in you data challenge repo, called "gh-pages"
 * Switch to gh-pages branch
+* Using pandoc or dilliger.io export, create a html version of your markdown file.
 * Commit and push a AboutMe.html file
 
-Example: You can see:  
+Example: You can see how the branch  
 Gh-Pages: https://github.com/StartupBot/MobileTouch/tree/gh-pages  
-WebSite: http://startupbot.github.io/MobileTouch/  
+will point to the website: http://startupbot.github.io/MobileTouch/  
 
 Advanced: You can use a static site generator such as jekyll to generate html from markdown and push to your github pages.
