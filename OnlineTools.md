@@ -6,7 +6,23 @@
 
 ##### Issues
 
-##### Github Pages
+Issue trackers, such as Bugzilla, originated as a bug reporting tools. A project hosted on github comes with an issue tracker too. Any one can report an issue, add labels, and assign any team member(s) can be assigned to an issue.
+
+![image](https://cloud.githubusercontent.com/assets/742934/15636814/9b3b210e-25d8-11e6-9180-3d5eba933357.png)
+
+Nowadays, developers also use issues as a lightweight task management tool. For this usecase, it best works for smaller projects.
+
+See *open* issues: https://github.com/alt-code/AutoSpark/issues  
+See *closed* issues: https://github.com/alt-code/AutoSpark/issues?q=is%3Aissue+is%3Aclosed
+
+**Features**:
+
+* You can create task lists: https://github.com/blog/1375%0A-task-lists-in-gfm-issues-pulls-comments
+* You can use labels to filter issues.
+* You can add pictures, code snippets as comments.
+* You can assign multiple people as an owner of issue.
+* You can reply to a comment on an issue via email. Great way to discuss with others even on phone.
+
 
 ### Trello
 
@@ -36,8 +52,11 @@ High-level goals
 
 ##### A
 
+## Practice
 
+## Other Tools
 
+Some other tools that can be helpful.
 
 ### Cloud Nine
 
