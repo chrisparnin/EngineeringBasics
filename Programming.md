@@ -2,8 +2,12 @@
 
 # Programming
 
+Choose which language you want to try programming in (python/node). Then, We're going to import the product hunt data (posts and votes).
 
-
+* Import votes csv
+* Import posts csv
+* Match vote data with posts (hint: post_id)
+* Find post with highest votes.
 
 ## Online Resources
 
