@@ -1,4 +1,4 @@
-[Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming) | [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)
+[Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming) | [Task Management](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)
 
 # Engineering Basics
 
@@ -16,8 +16,8 @@ The primary goal of this workshop is for you have to have installed and learned 
    Basic overview of git. Two interactive tutorials for learning commands.
 5. [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming)  
    Practice basic programming tasks with python and node.
-6. [Online Tools](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)  
-   Github issues and pages, trello boards, cloud nine, and more...
+6. [Task Management](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)  
+   Using Github issues and Trello boards for task management.
 
 
 
