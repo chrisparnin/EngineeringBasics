@@ -29,7 +29,7 @@ In kanban, you have a “visual” pipeline for transitioning ideas into a deliv
 
 ##### Boards, Lists, Cards
 
-![image](https://cloud.githubusercontent.com/assets/742934/15635646/cbe2b4fa-25b2-11e6-8dc9-e6cafca6629c.png)
+![image](https://cloud.githubusercontent.com/assets/742934/15636941/eb418154-25db-11e6-9814-5a3c835c0c11.png)
 
 Trello allows you to create boards.  On those boards, you can create lists.  Lists can be used to hold cards.
 
