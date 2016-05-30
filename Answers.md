@@ -9,6 +9,14 @@ for fn in `ls *.csv`; do
     cat $fn | wc -l
 ```
 
+Or
+
+```
+ls *.csv | while read fn; do
+  echo "the next file is $fn " $(wc -l $fn)
+  done
+```
+
 And
 
 ```
