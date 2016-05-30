@@ -116,7 +116,7 @@ When editing markdown and code scripts, features such as syntax highlighting, au
 * Online: Also see: http://dillinger.io/
 * Mac: [MacDown](http://macdown.uranusjr.com/)
 * IPad: [ByWord](https://itunes.apple.com/us/app/byword/id482063361?mt=8)
-* Windows: [MarkdownPad 2](http://markdownpad.com/download.html)
+* Windows: [MarkdownPad 2](http://markdownpad.com/download.html)  
   If you have trouble seeing a html preview, you may need to install the [Awesomium SDK](http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe). More details [here](http://markdownpad.com/faq.html#livepreview-directx). Restart Markdown Pad 2 after install.
 ##### Code Editors
 
