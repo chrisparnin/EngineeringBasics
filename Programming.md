@@ -19,6 +19,10 @@ https://c9.io/
 
 http://pythontutor.com/visualize.html#mode=edit
 
+### Python Jupyter
+
+A online notebook for python: http://jupyter.org/
+
 ### JSFiddle
 
 A great way to try out javascript in the browser.
