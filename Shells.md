@@ -54,7 +54,8 @@ Missing wget? https://chocolatey.org/packages/Wget
 
 #### More practice
 
-* Find the largest file
+* Write a simple shell script to find the largest file  
+Hint: (loop through each file in directory and run `wc -l`
 
 ## Advanced: Shell Programming
 
