@@ -52,7 +52,11 @@ http://www.commandlinefu.com/commands/browse
 
 Missing wget? https://chocolatey.org/packages/Wget
 
-### Advanced: Shell Programming
+#### More practice
+
+* Find the largest file
+
+## Advanced: Shell Programming
 
 The shell is a general programming langauge:
 
