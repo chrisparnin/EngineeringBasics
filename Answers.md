@@ -14,7 +14,7 @@ Or
 ```
 ls *.csv | while read fn; do
   echo "the next file is $fn " $(wc -l $fn)
-  done
+done
 ```
 
 And
