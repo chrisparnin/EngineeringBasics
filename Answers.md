@@ -28,21 +28,25 @@ With python
 ```python
 import csv
 with open('data/posts--2016-04-01_14-36-24-UTC.csv', 'rb') as f:
+	# Read CSV deliminted by ';'
 	reader = csv.reader(f,delimiter=';')
+	# Get and print header
 	columns = next(reader)
-	posts = list(reader)
-
 	print columns
-
-	max = 0
-	maxPost = None
+	
+	# Get rest of data
+	posts = list(reader)
 
 	# Option 1: Sort
 	posts.sort(key=lambda p: int(p[6]))
 
+	# Print out all posts (sorted), but formatted so each post is on own newline.
 	print('\n'.join('{}'.format(item) for item in posts))
 
 	# Option 2: Loop through and find max
+	max = 0
+	maxPost = None
+
 	print(len(posts))
 	for post in posts:
 		id, created_at, name, tagline, user_id, user_username, votes_count, comments_count, redirect_url, discussion_url = post
