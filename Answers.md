@@ -19,7 +19,7 @@ chmod +x findLongest.sh
 ### Finding post with highest votes
 
 Getting the top most votes with just unix commands:
-```
+```bash
 cat data/posts--2016-04-01_14-36-24-UTC.csv | sort -t";" -n -k 7 | tail
 ```
 
