@@ -4,7 +4,7 @@
 
 Choose which language you want to try programming in (python/node). Then, We're going to import the product hunt data (posts).
 
-Practice: Find the post with the highest number of votes?
+**Practice**: Find the post with the highest number of votes?
 
 What's your first step?  What does the data look like:
 
