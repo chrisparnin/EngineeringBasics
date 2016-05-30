@@ -29,3 +29,11 @@ http://pcottle.github.io/learnGitBranching/
 * Moving Work Around
 * A Mixed Bag
 * Advanced Topics
+
+## Practice: Creating a Repo
+
+* Create a repo for your data challenge
+* Add a simple README.md
+* Commit
+* Add remote github repo
+* Push
