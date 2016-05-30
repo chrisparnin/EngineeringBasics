@@ -46,7 +46,7 @@ brew tap homebrew/science
 brew install R
 ```
 
-## Development Environments and Basic Coding Tasks
+## Practice 1: Install Basic Development Environments
 
 We will install a basic node.js, Java, and python development environment. Let's practice our package management skills learned above.
 
@@ -74,7 +74,7 @@ Finally, you probably want to have the latest version of Eclipse if you haven't 
 
 https://eclipse.org/downloads/
 
-##### Testing your build environment
+## Practice 2: Testing your build environment
 
 Let's put your development environment to the test. See if you can build the following project. It requires python, node, and c++ to be properly installed on a system.
 
