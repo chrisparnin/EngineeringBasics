@@ -42,6 +42,16 @@ http://explainshell.com/explain?cmd=tar+-zxvf
 A list of command line examples for interesting tasks:  
 http://www.commandlinefu.com/commands/browse
 
+## Practice: Importing a CSV file
+
+* Download the Product Hunt Data `wget https://s3-us-west-2.amazonaws.com/producthunt-downloads/ph-export--2016-04-01.tar.gz`
+* Extract dataset: `tar -zxvf ph-export--2016.tar.gz`
+* Change into product-hunt folder.
+* Inspect the file contents: `head posts--2016-04-01_14-36-24-UTC.csv`
+* Estimate number of contents: `cat posts--2016-04-01_14-36-24-UTC.csv | wc -l`
+
+Missing wget? https://chocolatey.org/packages/Wget
+
 ### Advanced: Shell Programming
 
 The shell is a general programming langauge:
