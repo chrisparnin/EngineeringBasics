@@ -52,7 +52,7 @@ It is recommended that you break tasks down into 2--4 hour chunks.
 * Too many things
 * Items sticking around not making progress.
 
-Instead of saying "Do analysis" => "Find R package for doing peak finding package". This is more concrete and actionable.
+Instead of saying "Do analysis" => "Find R package for doing peak detection". This is more concrete and actionable.
 
 ### Scrum
 
