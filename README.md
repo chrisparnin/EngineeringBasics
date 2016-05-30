@@ -13,7 +13,7 @@ The primary goal of this workshop is for you have to have installed and learned 
 4. [Version Control with Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git)  
    Basic overview of git. Two interactive tutorials for learning commands.
 3. [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown)  
-   Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown. **Creating Github Pages**.
+   Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown. Creating Github Pages.
 5. [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming)  
    Practice basic programming tasks with python and node.
 6. [Task Management](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)  
