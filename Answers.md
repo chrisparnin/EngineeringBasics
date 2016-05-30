@@ -2,7 +2,7 @@
 ### Finding data with most lines
 
 findLongest.sh
-```
+```bash
 #!/bin/bash
 for fn in `ls *.csv`; do
     echo "the next file is $fn"
@@ -12,7 +12,7 @@ done
 
 Or
 
-```
+```bash
 ls *.csv | while read fn; do
   echo "the next file is $fn " $(wc -l $fn)
 done
@@ -20,7 +20,7 @@ done
 
 And
 
-```
+```bash
 chmod +x findLongest.sh
 ./findLongest.sh
 ```
