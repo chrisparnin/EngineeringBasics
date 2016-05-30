@@ -1,10 +1,8 @@
 [Shells](https://github.com/REU-SOS/EngineeringBasics/blob/master/Shells.md#shells) | [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management) |  [Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git) | [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown) | [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming) | [Task Management](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)
 
-# Online Tools
+# Task Management
 
-### Github 
-
-##### Issues
+### Github Issues
 
 Issue trackers, such as Bugzilla, originated as a bug reporting tools. A project hosted on github comes with an issue tracker too. Any one can report an issue, add labels, and assign any team member(s) can be assigned to an issue.
 
@@ -23,25 +21,29 @@ See *closed* issues: https://github.com/alt-code/AutoSpark/issues?q=is%3Aissue+i
 * You can assign multiple people as an owner of issue.
 * You can reply to a comment on an issue via email. Great way to discuss with others even on phone.
 
-
 ### Trello
 
 [Trello](https://trello.com/) is a planning tool that is inspired from kanban and agile methods.
 
 In kanban, you have a “visual” pipeline for transitioning ideas into a delivered product. In trello, you can move a card (often representing a task) between lists.
 
-![image](https://cloud.githubusercontent.com/assets/742934/15635646/cbe2b4fa-25b2-11e6-8dc9-e6cafca6629c.png)
-
 ##### Boards, Lists, Cards
 
-Trello allows you to create boards.
+![image](https://cloud.githubusercontent.com/assets/742934/15635646/cbe2b4fa-25b2-11e6-8dc9-e6cafca6629c.png)
 
-Recommended Lists:
-Done
-Doing
-Todo (2 weeks)
-High-level goals
+Trello allows you to create boards.  On those boards, you can create lists.  Lists can be used to hold cards.
 
+Recommended Pipeline:
+
+* High-level goals: What do you want to accomplish?
+* This Week: What actions can you do to accomplish those goals.
+* Doing: What are you doing *today*
+* Waiting: What is blocked.
+* Done: What have you completed.
+
+![image](https://cloud.githubusercontent.com/assets/742934/15635646/cbe2b4fa-25b2-11e6-8dc9-e6cafca6629c.png)
+
+It is recommended that you break tasks down into 2--4 hour chunks. 
 
 ##### Signs of a bad Trello board
 
@@ -50,10 +52,14 @@ High-level goals
 * Too many things
 * Items sticking around not making progress.
 
-##### A
+Instead of saying "Do analysis" => "Find R package for doing peak finding package". This is more concrete and actionable.
+
+### Scrum
+
+We will 
 
 ## Practice: Brainstorm some tasks for your data challenge
 
-Add some issues to your data challenge repo.
-
+* Add some issues to your data challenge repo.
+* Create a personal trello board for this summer.
 
