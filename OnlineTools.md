@@ -52,7 +52,9 @@ High-level goals
 
 ##### A
 
-## Practice
+## Practice: Brainstorm some tasks for your data challenge
+
+Add some issues to your data challenge repo.
 
 ## Other Tools
 
