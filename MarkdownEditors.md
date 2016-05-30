@@ -125,3 +125,15 @@ When editing markdown and code scripts, features such as syntax highlighting, au
 * [Sublime Text](https://www.sublimetext.com/)
 * Level up vim: Put some of these stuff in [your vimrc](http://amix.dk/vim/vimrc.html).
 * ... Send pull request.
+
+## Practice: Create an About me github page
+
+* Create a branch in you data challenge repo, called "gh-pages"
+* Switch to gh-pages branch
+* Commit and push a AboutMe.html file
+
+Example: You can see:  
+Gh-Pages: https://github.com/StartupBot/MobileTouch/tree/gh-pages  
+WebSite: http://startupbot.github.io/MobileTouch/  
+
+Advanced: You can use a static site generator such as jekyll to generate html from markdown and push to your github pages.
