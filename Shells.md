@@ -47,6 +47,9 @@ Essential commands:
 * **ls**: list content of a directory.
 * **cd**: change directories to a new path.
 * **mkdir**: make a new directory.
+* **pwd**: output current directory
+* **cp**: copy files
+* **rm**: rm files
 * **touch**: make a new file/update status**
 * **cat**: output the contents of a file.
 * **head**: output the first lines of a file.
