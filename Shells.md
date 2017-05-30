@@ -54,6 +54,7 @@ Essential commands:
 * **grep**: search files for a key phrase.
 * **wget**: retrieve file from the web.
 * **cut**: extract output of a file (columns)
+* **awk** and **sed**: Magic commands for extracting, searching, and transforming content.
 
 ## Practice: Importing a CSV file
 
