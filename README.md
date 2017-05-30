@@ -10,13 +10,14 @@ The primary goal of this workshop is for you have to have installed and learned 
    Basic overview of unix shells, shell programming, and windows shell tips.
 2. [Package Managers](https://github.com/REU-SOS/EngineeringBasics/blob/master/PackageManagers.md#configuration-management)  
    Introduction to basic configuration management with package managers.
-4. [Version Control with Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git)  
+3. [Version Control with Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git)  
    Basic overview of git. Two interactive tutorials for learning commands.
-3. [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown)  
+4. [Environments](Environments.md#Environments) Tools for creating and managing virtual computing environments.
+5. [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown)  
    Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown. Creating Github Pages.
-5. [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming)  
+6. [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming)  
    Practice basic programming tasks with python and node.
-6. [Task Management](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)  
+7. [Task Management](https://github.com/REU-SOS/EngineeringBasics/blob/master/OnlineTools.md#online-tools)  
    Using Github issues and Trello boards for task management.
 
 
