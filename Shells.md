@@ -11,6 +11,8 @@ http://swcarpentry.github.io/shell-novice/index.html -- this page is more of a c
 
 ### Tips for Windows Users
 
+Skip to Package Managers, and install gnuwin basic utils for windows: `choco install gnuwin32-coreutils.install`.
+
 * Git for Windows provides a BASH emulation used to run Git from the command line. You can run "Git Bash" to get this slightly improved command prompt.
 * Powershell is a new shell for windows.
 * Windows 10 will soon support a native bash shell! Stay tuned.
