@@ -12,7 +12,8 @@ The primary goal of this workshop is for you have to have installed and learned 
    Introduction to basic configuration management with package managers.
 3. [Version Control with Git](https://github.com/REU-SOS/EngineeringBasics/blob/master/Git.md#git)  
    Basic overview of git. Two interactive tutorials for learning commands.
-4. [Environments](Environments.md#Environments) Tools for creating and managing virtual computing environments.
+4. [Environments](Environments.md#Environments)  
+   Tools for creating and managing virtual computing environments.
 5. [Markdown and Editors](https://github.com/REU-SOS/EngineeringBasics/blob/master/MarkdownEditors.md#markdown)  
    Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown. Creating Github Pages.
 6. [Programming with Python/Node](https://github.com/REU-SOS/EngineeringBasics/blob/master/Programming.md#programming)  
