@@ -1,3 +1,11 @@
+[Shells](Shells.md#shells) | [Package Managers](PackageManagers.md#configuration-management) |  [Git](Git.md#git) | [Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming with Python/Node](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools)
+
+# Environments
+
+Creating computing and development environments will be an essential skill for processing and manipulating data with tools and code. Unfortunately, consistentally getting software installed on a your computer and correctly setting up the environments can take away weeks of your productive time.
+
+Virtual environments can provide a useful solution for automating the creating and management of your computing environment and development workflow. Lets setup a simple machine.
+
 ## Creating Virtual Machine
 
 * Install [vagrant](https://www.vagrantup.com/downloads.html).
