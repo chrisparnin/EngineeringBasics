@@ -68,7 +68,7 @@ On Mac OS, this is a nice way to setup many c/c++ compilers and linkers, and bui
 xcode-select --install
 ```
 
-For Windows, installing [Visual Studio 2015, Community](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), will actually make it easier to get a similiar set of tools installed on your system.
+For Windows, installing [Visual Studio 2015, Community](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), will actually make it easier to get a similiar set of tools installed on your system. Alternatively, for a lighter weight way, install the [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) and the [Managed Apps Build Tools](https://www.microsoft.com/en-us/download/details.aspx?id=48159).
 
 Finally, you probably want to have the latest version of Eclipse if you haven't already.  There is a nice auto-installer you can use (see banner on top of page).
 
