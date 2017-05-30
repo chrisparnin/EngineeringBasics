@@ -48,12 +48,12 @@ Essential commands:
 * **cd**: change directories to a new path.
 * **mkdir**: make a new directory.
 * **touch**: make a new file/update status**
-
 * **cat**: output the contents of a file.
 * **head**: output the first lines of a file.
 * **tail**: output the last lines of a file.
-
 * **grep**: search files for a key phrase.
+* **wget**: retrieve file from the web.
+* **cut**: extract output of a file (columns)
 
 ## Practice: Importing a CSV file
 
