@@ -42,6 +42,19 @@ http://explainshell.com/explain?cmd=tar+-zxvf
 A list of command line examples for interesting tasks:  
 http://www.commandlinefu.com/commands/browse
 
+Essential commands:
+
+* **ls**: list content of a directory.
+* **cd**: change directories to a new path.
+* **mkdir**: make a new directory.
+* **touch**: make a new file/update status**
+
+* **cat**: output the contents of a file.
+* **head**: output the first lines of a file.
+* **tail**: output the last lines of a file.
+
+* **grep**: search files for a key phrase.
+
 ## Practice: Importing a CSV file
 
 * Download the Product Hunt Data `wget https://s3-us-west-2.amazonaws.com/producthunt-downloads/ph-export--2016-04-01.tar.gz`
