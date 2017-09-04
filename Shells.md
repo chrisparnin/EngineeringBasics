@@ -11,7 +11,7 @@ http://swcarpentry.github.io/shell-novice/index.html -- this page is more of a c
 
 ### Tips for Windows Users
 
-Skip to Package Managers, and install gnuwin basic utils for windows: `choco install gnuwin32-coreutils.install`. Install git (`choco install git`). Add to your System Environment Variables Path: `C:\Program Files (x86)\GnuWin32\bin`, and `C:\Program Files\Git\bin`.
+Skip to Package Managers, and install gnuwin basic utils for windows: `choco install gnuwin32-coreutils.install`. Install git (`choco install git`). Add to your System Environment Variables Path: `C:\Program Files (x86)\GnuWin32\bin`, and `C:\Program Files\Git\usr\bin`.
 Restart with a new shell.
 
 * Git for Windows provides a BASH emulation used to run Git from the command line. You can run "Git Bash" to get this slightly improved command prompt.
