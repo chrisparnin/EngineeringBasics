@@ -1,8 +1,8 @@
-[Shells](Shells.md#shells) | [Package Managers](PackageManagers.md#configuration-management) |  [Git](Git.md#git) | [Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming with Python/Node](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools)
+[Shells](Shells.md#shells) | [Development Environments](PackageManagers.md#development-environments) |  [Git](Git.md#git) | [Virtural Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming Languages](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools) | [Specialized Tools](SpecializedTools.md#specialized-tools) 
 
 # Task Management
 
-### Github Issues
+## Github Issues
 
 Issue trackers, such as Bugzilla, originated as a bug reporting tools. A project hosted on github comes with an issue tracker too. Any one can report an issue, add labels, and assign any team member(s) can be assigned to an issue.
 
@@ -21,13 +21,13 @@ See *closed* issues: https://github.com/alt-code/AutoSpark/issues?q=is%3Aissue+i
 * You can assign multiple people as an owner of issue.
 * You can reply to a comment on an issue via email. Great way to discuss with others even on phone.
 
-### Trello
+## Trello
 
 [Trello](https://trello.com/) is a planning tool that is inspired from kanban and agile methods.
 
 In kanban, you have a “visual” pipeline for transitioning ideas into a delivered product. In trello, you can move a card (often representing a task) between lists.
 
-##### Boards, Lists, Cards
+### Boards, Lists, Cards
 
 ![image](https://cloud.githubusercontent.com/assets/742934/15636941/eb418154-25db-11e6-9814-5a3c835c0c11.png)
 
@@ -45,7 +45,7 @@ Recommended Pipeline:
 
 It is recommended that you break tasks down into 2--4 hour chunks. 
 
-##### Signs of a bad Trello board
+### Signs of a bad Trello board
 
 * Empty
 * Only high-level goals
@@ -54,7 +54,7 @@ It is recommended that you break tasks down into 2--4 hour chunks.
 
 Instead of saying "Do analysis" => "Find R package for doing peak detection". This is more concrete and actionable.
 
-### Scrum
+## Scrum
 
 Scrum is a process for managing tasks. The most popular aspect people use is the daily stand-up meeting. In a daily standup, people report the progress and status of the tasks. The idea is by standing up, you won't try taking too long to talk.
 
@@ -66,7 +66,7 @@ The main things covered in a scrum:
 
 We will be using scrums in our research lab. We will have them on Wednesdays at 9:30am.
 
-## Practice: Brainstorm some tasks for your data challenge
+## Practice: Set up a Task List for this summer
 
-* Add some issues to your data challenge repo.
+* Add some issues to your data challenge repo.  (More about the data challenge later!)
 * Create a personal trello board for this summer.

@@ -1,4 +1,4 @@
-[Shells](Shells.md#shells) | [Package Managers](PackageManagers.md#configuration-management) |  [Git](Git.md#git) | [Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming with Python/Node](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools)
+[Shells](Shells.md#shells) | [Development Environments](PackageManagers.md#development-environments) |  [Git](Git.md#git) | [Virtural Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming Languages](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools) | [Specialized Tools](SpecializedTools.md#specialized-tools) 
 
 # Git
 
@@ -21,14 +21,6 @@ We will solve the "Introduction Sequence" levels in:
 http://pcottle.github.io/learnGitBranching/   
 
 ![example](https://cloud.githubusercontent.com/assets/742934/9494425/c4dd4b66-4bd3-11e5-9aac-04bfc8fed771.png)
-
-**If you finish the remaining levels during this week, you will get a special Github Bonus pack, which includes stickers!**
-
-* <s>Introduction Sequence</s>
-* Ramping Up
-* Moving Work Around
-* A Mixed Bag
-* Advanced Topics
 
 ## Practice: Creating a Repo
 

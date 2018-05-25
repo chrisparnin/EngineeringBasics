@@ -1,4 +1,4 @@
-[Shells](Shells.md#shells) | [Package Managers](PackageManagers.md#configuration-management) |  [Git](Git.md#git) | [Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming with Python/Node](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools)
+[Shells](Shells.md#shells) | [Development Environments](PackageManagers.md#development-environments) |  [Git](Git.md#git) | [Virtural Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming Languages](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools) | [Specialized Tools](SpecializedTools.md#specialized-tools) 
 
 # Programming
 
