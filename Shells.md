@@ -98,6 +98,17 @@ A neat trick: Command the value of a file into your clipboard!
 
 Windows: `clip < file.txt` Mac: `pbcopy < file.txt` 
 
+## Practice: Working with a CSV File
+
+* Create a `product-hunt-dataset` folder in your class folder.
+* Download the Product Hunt Data `wget https://s3-us-west-2.amazonaws.com/producthunt-downloads/ph-export--2016-04-01.tar.gz`
+* Extract dataset: `tar -zxvf ph-export--2016-04-01.tar.gz`
+* Change into `product-hunt` folder.
+* Inspect the file contents: `head posts--2016-04-01_14-36-24-UTC.csv`
+* Estimate number of contents: `cat posts--2016-04-01_14-36-24-UTC.csv | wc -l`
+
+Missing wget? https://chocolatey.org/packages/Wget
+
 ## Environment Variables
 
 Environment variables are dynamically configurable elements that are available to processes on your system.
@@ -154,22 +165,6 @@ To summarize (Mac/Linux):
 * Use `VAR=VALUE <command>` for a variable only available to that command.
 * Set permenant variables inside a start script such as `~/.bashrc`.
 
-## Practice: Working with a CSV File
-
-* Create a `product-hunt-dataset` folder in your class folder.
-* Download the Product Hunt Data `wget https://s3-us-west-2.amazonaws.com/producthunt-downloads/ph-export--2016-04-01.tar.gz`
-* Extract dataset: `tar -zxvf ph-export--2016-04-01.tar.gz`
-* Change into `product-hunt` folder.
-* Inspect the file contents: `head posts--2016-04-01_14-36-24-UTC.csv`
-* Estimate number of contents: `cat posts--2016-04-01_14-36-24-UTC.csv | wc -l`
-
-Missing wget? https://chocolatey.org/packages/Wget
-
-## More practice
-
-* Write a simple shell script to find the largest file  
-Hint: (loop through each file in directory and run `wc -l`
-
 ## Advanced: Shell Programming
 
 The shell is a general programming language that can be parameterized.  You may find it useful to create a bash script to automate frequent commands as part of data collection and analysis.  There are many online resources (like [Ryans Tutorials - Bash Scripting Tutorial](https://ryanstutorials.net/bash-scripting-tutorial/) to help with the creation of a bash script.
@@ -213,3 +208,7 @@ pattern2) commands2;;
 esac
 ```
 
+## Optional practice
+
+* Write a simple shell script to find the largest file  
+Hint: (loop through each file in directory and run `wc -l`

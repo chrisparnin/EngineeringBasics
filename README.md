@@ -24,6 +24,16 @@ The primary goal of this workshop is for you have to have installed and learned 
 9. [Specialized Tools](SpecializedTools.md#specialized-tools)
    Specialized tools for data analytics including MySQL, R, and RStudio.
 
+## Checklist
+
+* Setup
+  - [ ] Practice: Installed package manager for os.
+  - [ ] Installed git, java, python2, nodejs
+  - [ ] Optional: Make Windows Awesome
+* Shells
+  - :white_circle: Practice: ..
+  - :white_circle: Setup env variable.
+  - :white_circle: Optional: Write a shell script.
 
 
 

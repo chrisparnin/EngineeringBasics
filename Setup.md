@@ -59,7 +59,7 @@ See if you can find the packages for these tools with your package manager and i
 
 Tip: If you install Git on Windows, make sure to have add the git utils to your PATH. This will access to many GNU commands in Windows.
 
-## Bonus: Make Windows Just as Awesome
+## Optional: Make Windows Just as Awesome
 
 If you have **Windows 10**, you can use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)!  Follow the [Windows 10 Installation Guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
