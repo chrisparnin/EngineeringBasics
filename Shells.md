@@ -9,17 +9,20 @@ But with great power comes great [bullshittery](http://www.pgbovine.net/command-
 If you've hardly used a command line environment before, you might want to go review this more thorough tutorial:
 http://swcarpentry.github.io/shell-novice/index.html -- this page is more of a collection of pointers and resources.
 
-## Windows Users
 
-If you have **Windows 10**, you can use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)!  Follow the [Windows 10 Installation Guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+## Shell Basics
 
-If you have an **earlier version of Windows**, do one of the following:
+### Environment Variables
 
-  * Install [Git for Windows](https://gitforwindows.org/).  Git for Windows provides a Bash shell that includes several helpful commands.
-  * Install [Chocolatey on Windows](PackageManagers.md#installing-chocolatey-on-windows).
-	  * Install gnuwin basic utils for windows: `choco install gnuwin32-coreutils.install`
-	  * Update your System Environment Variables Path: `C:\Program Files (x86)\GnuWin32\bin`
-	  * Restart your shell (the gnuwin32 commands will work in Git Bash too!)
+echo $PATH
+
+A common problem with shells is that changing your `PATH` after an installation will not affect any currently open shells. You either have to manually refresh the shell or open a new one. 
+
+##### Setting Environment Variables
+
+
+
+
 
 ## Shell Basics
 

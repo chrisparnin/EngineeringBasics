@@ -12,33 +12,6 @@ Package managers are tools for installing libraries and tools, which help manage
 
 There are generally two flavors of package managers. *Binary* package managers typically install platform specific dependencies, whereas, *source* package managers typically install libraries you can use in your code.
 
-**Binary**: brew, choco, apt-get  
-**Source**: npm, pip, maven
-
-## Installing a Binary Package Manager
-
-If you're using linux, you typically already have `yum` or `apt-get`. You can skip this step. Otherwise, for Windows and Mac OS X, let's install some tools.
-
-### Installing Chocolatey on Windows
-
-Chocolatey is a package manager for Windows. 
-
-Follow the instructions on the Chocolatey website to install. https://chocolatey.org/install](https://chocolatey.org/install)
-
-Once Chocolatey is installed, you can use it to install other tools on your system using `choco install <package-name>`.  Look for the package name on the Chocolatey website.
-
-Here are some example commands
-```
-# Install core Linux utilities
-choco install gnuwin32-coreutils.install
-# Install wget
-choco install wget
-```
-
-### Installing HomeBrew on Mac OS X
-
-Open a terminal window and run the install command shown on [http://brew.sh/](http://brew.sh/).
-
 Let's install some useful tools:
 
 ```bash
