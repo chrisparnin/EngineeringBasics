@@ -1,4 +1,4 @@
-[Shells](Shells.md#shells) | [Development Environments](PackageManagers.md#development-environments) |  [Git](Git.md#git) | [Virtural Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming Languages](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools) | [Specialized Tools](SpecializedTools.md#specialized-tools) 
+[Setup](Setup.md#setup) | [Shells](Shells.md#shells) |  [Git](Git.md#git) | [Markdown and Editors](MarkdownEditors.md#markdown) |  [Virtural Environments](Environments.md#environments) | [Task Management](OnlineTools.md#online-tools)
 
 # Engineering Basics
 
@@ -8,33 +8,34 @@ The primary goal of this workshop is for you have to have installed and learned 
 
 1. [Setup](Setup.md#setup)
    Getting started.
+   - [ ] Practice: Installed package manager for os.
+   - [ ] Installed git, java, python2, nodejs
+   - [ ] Optional: Make Windows Awesome
 2. [Shells](Shells.md#shells)  
    Basic overview of unix shells, shell programming, and windows shell tips.
-3. [Development Environments](PackageManagers.md#configuration-management)  
-   Introduction to basic configuration management with package managers and IDEs.
-4. [Version Control with Git](Git.md#git)  
+  - [ ] Practice: ..
+  - [ ] Setup env variable.
+  - [ ] Optional: Write a shell script.
+3. [Version Control with Git](Git.md#git)  
    Basic overview of git. Two interactive tutorials for learning commands.
+  - [ ] https://try.github.io/ tutorial
+  - [ ] Complete 4 levels in *Introduction to Git Commits*
+  - [ ] Practice: Creating a repo
+  - [ ] Optional: Solve all git branching levels
+4. [Markdown and Editors](MarkdownEditors.md#markdown)  
+   Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown. Creating Github Pages.
+  - [ ] ... 
+  - [ ] Install IDE(s)/Editors
+  - [ ] Create a GitHub Pages 
 5. [Virtual Environments](Environments.md#Environments)  
    Tools for creating and managing virtual computing environments.
-6. [Markdown and Editors](MarkdownEditors.md#markdown)  
-   Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown. Creating Github Pages.
-
-8. [Task Management](OnlineTools.md#online-tools)  
+   - [ ] Install VirtualBox and Baker
+   - [ ] Create a simple virtual machine
+   - [ ] Optional: Create your own environment
+6. [Task Management](OnlineTools.md#online-tools)  
    Using Github issues and Trello boards for task management.
-9. [Specialized Tools](SpecializedTools.md#specialized-tools)
-   Specialized tools for data analytics including MySQL, R, and RStudio.
-
-## Checklist
-
-* Setup
-  - [ ] Practice: Installed package manager for os.
-  - [ ] Installed git, java, python2, nodejs
-  - [ ] Optional: Make Windows Awesome
-* Shells
-  - :white_circle: Practice: ..
-  - :white_circle: Setup env variable.
-  - :white_circle: Optional: Write a shell script.
-
+   - [ ] Create issue on GitHub with this checklist (filled in) 
+   - [ ] Try trello
 
 
 
