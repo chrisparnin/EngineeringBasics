@@ -4,19 +4,19 @@
 
 To successfully build software, you need a properly configured environment with a variety of tools. To help us get started, we will we install some tools, package managers, that make it a little easier to configure systems. 
 
-Additionally, we will install two integrated development environments (IDEs) that include libraries and other resources to support development.
-
 Whether you're a Mac, Windows, or Linux user---you should be able to find a way to be productive with the tools from this workshop. However, there may be specific tweaks, issues, and accomodatations you may have to make based on your platform.
 
-## An installation philosophy: Avoid manual installation
+## An installation philosophy
+
+> *Avoid manual installation, automate with package managers!*
 
 When possible, using a package manager can allow you to automate and streamline the installation of tools. Instead of hunting down the right website, finding the right version and dowload link, then clicking through an installation wizard---you let the package manager take care of all those manual steps for you! 
 
-*Tip*: Later on, the ability to automate the installation of software environments becomes important in later stages of software development, such as continuous integration, or deployment.
+Tip: Later on, the ability to automate the installation of software environments becomes important in later stages of software development, such as continuous integration, or deployment.
 
 ### Package Managers
 
-Package managers are tools for installing libraries and tools, which help manage dependencies and configuration of files and environment variables. 
+*Package managers* are tools for installing libraries and tools, which help manage dependencies and configuration of files and environment variables. 
 
 There are generally two flavors of package managers. *Binary* package managers typically install platform specific dependencies, whereas, *source* package managers typically install libraries you can use in your code.
 
