@@ -32,9 +32,9 @@ http://explainshell.com/explain?cmd=tar+-zxvf
 
 ## Shell Basics
 
-### Opening a shell
-
 Depending on your operating system and desktop manager, you have many ways to open up a shell. There may even been several different choices for shell programs.
+
+### Accessing and Using Shells
 
 Mac: you can run the Terminal in Applications. 
 
@@ -48,7 +48,57 @@ Windows: *Admin shell*. Some commands require adminstration privileges. If you n
 
 Tip: If opening up a cmd shell in admin mode, make sure you do not perform operations, such as `git clone` in your current directory (`C:\WINDOWS\system32`). Otherwise, you will be writing to a location that only admin will have access to which will make it difficult to run the commands/tasks you are intending on doing.
 
-### Environment Variables
+### Commands
+
+99% of the reason you use shells is to run useful commands.
+
+##### Essential commands.
+
+* **`ls`**: list content of a directory.
+* **`cd`**: change directories to a new path.
+* **`mkdir`**: make a new directory.
+* **`pwd`**: output current directory
+* **`cp`**: copy files
+* **`rm`**: rm files
+* **`touch`**: make a new file/update status**
+* **`cat`**: output the contents of a file.
+* **`head`**: output the first lines of a file.
+* **`tail`**: output the last lines of a file.
+* **`grep`**: search files for a key phrase.
+* **`wget`**: retrieve file from the web.
+* **`cut`**: extract output of a file (columns)
+* **`awk`** and **`sed`**: Magic commands for extracting, searching, and transforming content.
+
+##### Combining commands
+
+Command can run sequentially or conditionally:
+
+```bash
+command1 ; command2
+(command1 ; command2) # in a sub-shell
+command1 || command2  # do command2 only if command1 fails
+command1 && command2  # do command2 only if command1 succeeds
+```
+
+##### Command I/O
+
+The UNIX shell commands push data from sources through filters along pipes. In a shell there are three sources of I/O: standard input (stdin), standard output (stout), and standard error (sterr). Standard error is a specialized version of standard out, so we'll focus on standard in and standard out.  The default for standard in is the keyboard and the default for standard out is to print to the shell (or console).
+
+Pipes and redirects change standard in and standard out from defaults.
+
+```bash
+command              # default standard in and standard out
+command < inputFile  # redirect of inputFile contents to command as standard in
+command > outputFile # redirect command output to outputFile as standard out
+command1 | command2  # pipes output of command1 as standard in to command2
+command &            # run in background, typically used for applications
+```
+
+A neat trick: Command the value of a file into your clipboard!
+
+Windows: `clip < file.txt` Mac: `pbcopy < file.txt` 
+
+## Environment Variables
 
 Environment variables are dynamically configurable elements that are available to processes on your system.
 
@@ -103,48 +153,6 @@ To summarize (Mac/Linux):
 * Use `VAR=VALUE` for a variable only available in the shell.
 * Use `VAR=VALUE <command>` for a variable only available to that command.
 * Set permenant variables inside a start script such as `~/.bashrc`.
-
-## Commands
-
-##### Essential commands.
-
-* **`ls`**: list content of a directory.
-* **`cd`**: change directories to a new path.
-* **`mkdir`**: make a new directory.
-* **`pwd`**: output current directory
-* **`cp`**: copy files
-* **`rm`**: rm files
-* **`touch`**: make a new file/update status**
-* **`cat`**: output the contents of a file.
-* **`head`**: output the first lines of a file.
-* **`tail`**: output the last lines of a file.
-* **`grep`**: search files for a key phrase.
-* **`wget`**: retrieve file from the web.
-* **`cut`**: extract output of a file (columns)
-* **`awk`** and **`sed`**: Magic commands for extracting, searching, and transforming content.
-
-##### Combining commands
-
-The UNIX shell tools push data from sources through filters along pipes. In a shell there are three sources of I/O: standard in, standard out, and standard error. Standard error is a specialized version of standard out, so we'll focus on standard in and standard out.  The default for standard in is the keyboard and the default for standard out is to print to the shell (or console).
-
-Pipes and redirects change standard in and standard out from defaults.
-
-```bash
-command              # default standard in and standard out
-command < inputFile  # redirect of inputFile contents to command as standard in
-command > outputFile # redirect command output to outputFile as standard out
-command1 | command2  # pipes output of command1 as standard in to command2
-command &            # run in background, typically used for applications
-```
-
-Command can run sequentially or conditionally:
-
-```bash
-command1 ; command2
-(command1 ; command2) # in a sub-shell
-command1 || command2  # do command2 only if command1 fails
-command1 && command2  # do command2 only if command1 succeeds
-```
 
 ## Practice: Working with a CSV File
 
