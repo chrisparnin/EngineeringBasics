@@ -10,7 +10,9 @@ Whether you're a Mac, Windows, or Linux user---you should be able to find a way 
 
 ## An installation philosophy: Avoid manual installation
 
-When possible, using a package manager can allow you to automate and streamline the installation of tools. Instead of hunting down the right website, find the right version, download and click through an installation wizard, you let the package manager take care of all those manual steps for you. Later on, the ability to automation installation of software environments becomes important in later stages of software development, such as continuous integration, or deployment.
+When possible, using a package manager can allow you to automate and streamline the installation of tools. Instead of hunting down the right website, finding the right version and dowload link, then clicking through an installation wizard---you let the package manager take care of all those manual steps for you! 
+
+*Tip*: Later on, the ability to automate the installation of software environments becomes important in later stages of software development, such as continuous integration, or deployment.
 
 ### Package Managers
 
@@ -18,14 +20,14 @@ Package managers are tools for installing libraries and tools, which help manage
 
 There are generally two flavors of package managers. *Binary* package managers typically install platform specific dependencies, whereas, *source* package managers typically install libraries you can use in your code.
 
-**Binary**: brew, choco, apt-get  
-**Source**: npm, pip, maven
+* **Binary**: brew, choco, apt-get  
+* **Source**: npm, pip, maven
 
 ### Installing Package Managers
 
 If you're using linux, you typically already have `yum` or `apt-get`. You can skip this step.
 
-### Installing HomeBrew on Mac OS X
+##### Installing HomeBrew on Mac OS X
 
 Homebrew is a popular package manager for MacOS. To install, open a terminal window and run the install command shown on [http://brew.sh/](http://brew.sh/).
 
@@ -34,7 +36,7 @@ Here is an example of how to install the utility `wget`.
 brew install wget
 ```
 
-### Installing Chocolatey on Windows
+##### Installing Chocolatey on Windows
 
 Chocolatey is a package manager for Windows. 
 
