@@ -6,8 +6,8 @@ In this workshop, you will setup a local (or virtual environment) consisting of 
 
 The primary goal of this workshop is for you have to have installed and learned a set of relevant tools for software development.
 
-1. [Setup](Setup.md#setup)
-   Getting started.
+1. [Setup](Setup.md#setup)  
+   Getting started. Get some tools on your machine. 
    - [ ] Practice: Installed package manager for os.
    - [ ] Installed git, java, python2, nodejs
    - [ ] Optional: Make Windows Awesome
