@@ -18,7 +18,7 @@ The primary goal of this workshop is for you have to have installed and learned 
    - [ ] Optional: Write a shell script.
 3. [Version Control with Git](Git.md#git)  
    Basic overview of git. Two interactive tutorials for learning commands.
-   - [ ] https://try.github.io/ tutorial
+   - [ ] Complete basic Git tutorial
    - [ ] Complete 4 levels in *Introduction to Git Commits*
    - [ ] Practice: Creating a repo
    - [ ] Optional: Solve all git branching levels
