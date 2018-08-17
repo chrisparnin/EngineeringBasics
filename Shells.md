@@ -7,24 +7,60 @@ A shell is a computing environment where commands can be interpreted, evaluated,
 But with great power comes great [bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm). Commands and their options can be terse, inconsistent, and difficult to learn. A steep learning curve often prevents novices from enjoying the eventual payoff.
 
 If you've hardly used a command line environment before, you might want to go review this more thorough tutorial:
-http://swcarpentry.github.io/shell-novice/index.html -- this page is more of a collection of pointers and resources.
-
+http://swcarpentry.github.io/shell-novice/index.html ---this page is more of a collection of pointers and resources.
 
 ## Shell Basics
+
+### Opening a shell
+
+Depending on your operating system and desktop manager, you have many ways to open up a shell. There may even been several different choices for shell programs.
+
+Windows: In windows, you can use Cmd, Powershell, or emulated shells (Bash for Git, Bash with Linux Subsystem). A downside to using an emulated shell is that you may be limited in accessing other executables/environments on windows.
+
+Windows: You access a shell in several ways. You can right click on the Windows Icon in the Task Bar and open a terminal window. You can type in the name of the shell program in the search bar (e.g., Cmd/Powershell).
+
+Mac: you can run the Terminal in Applications.
+
+IDES, such as VS Code provide easy access to a terminal (View => Terminal).
 
 ### Environment Variables
 
-echo $PATH
+Environment variables are dynamically configurable elements that are available to processes on your system.
 
-A common problem with shells is that changing your `PATH` after an installation will not affect any currently open shells. You either have to manually refresh the shell or open a new one. 
+Mac/Linux: `echo $PATH`
+Windows: `echo %PATH%`
+
+A common problem with shells is that changing your `PATH` or other environment variables after an installation/OS GUI change will not affect any currently open shells. You either have to manually refresh the shell or open a new one. 
 
 ##### Setting Environment Variables
 
+In addition to editing environment variables in your desktop manager GUI, you can also set environment variables in your shell.
+
+In Windows, you can use `set` and `setx` to update environment variables. `set` will update environment variables in your current shell instance, but that will be lost after the shell closes. Using `setx`, you can permanently, set an environment variable for the user or system (use `setx /m`). See the [documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) for more information.
+
+```
+C:\Users\chris>set DEBUG_MODE=true
+C:\Users\chris>echo %DEBUG_MODE%
+true
+```
+
+In bash/*sh environments, you have set variables also set temporary environment variables in two ways:
+
+```
+$ DEBUG_MODE=true
+$ echo $DEBUG_MODE
+true
+```
+
+```
+$ BUG_TEST=true echo $BUG_TEST
+
+```
+
+### 
 
 
-
-
-## Shell Basics
+### Shell Commands
 
 The UNIX shell tools push data from sources through filters along pipes. In a shell there are three sources of I/O: standard in, standard out, and standard error. Standard error is a specialized version of standard out, so we'll focus on standard in and standard out.  The default for standard in is the keyboard and the default for standard out is to print to the shell (or console).
 
