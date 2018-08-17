@@ -13,7 +13,7 @@ The primary goal of this workshop is for you have to have installed and learned 
    - [ ] Optional: Make Windows Awesome
 2. [Shells](Shells.md#shells)  
    Basic overview of unix shells, shell programming, and windows shell tips.
-   - [ ] Practice: ..
+   - [ ] Practice: Run commands to analyze data
    - [ ] Setup env variable.
    - [ ] Optional: Write a shell script.
 3. [Version Control with Git](Git.md#git)  

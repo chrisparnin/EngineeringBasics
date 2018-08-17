@@ -80,6 +80,8 @@ command1 || command2  # do command2 only if command1 fails
 command1 && command2  # do command2 only if command1 succeeds
 ```
 
+Note: In Windows, `;` does not work in Cmd, but does in Powershell. Use `&&` for the most portable commands.
+
 ##### Command I/O
 
 The UNIX shell commands push data from sources through filters along pipes. In a shell there are three sources of I/O: standard input (stdin), standard output (stout), and standard error (sterr). Standard error is a specialized version of standard out, so we'll focus on standard in and standard out.  The default for standard in is the keyboard and the default for standard out is to print to the shell (or console).
