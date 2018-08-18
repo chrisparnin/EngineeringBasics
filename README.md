@@ -22,11 +22,11 @@ The primary goal of this workshop is for you have to have installed and learned 
    - [ ] Complete 4 levels in *Introduction to Git Commits*
    - [ ] Practice: Creating a repo
    - [ ] Optional: Solve all git branching levels
-4. [Markdown and Editors](MarkdownEditors.md#markdown)  
-   Overview of markdown basics, lists, code, tables. Recommended editors for code and markdown. Creating Github Pages.
-   - [ ] ... 
+4. [Markdown and IDES](MarkdownEditors.md#markdown)  
+   Overview of markdown basics, lists, code, tables. Recommended editors for code. Creating Github Pages.
    - [ ] Install IDE(s)/Editors
-   - [ ] Create a GitHub Pages 
+   - [ ] Practice: Update markdown in README.md
+   - [ ] Optional: Create a GitHub Pages (gh-pages branch) 
 5. [Virtual Environments](Environments.md#Environments)  
    Tools for creating and managing virtual computing environments.
    - [ ] Install VirtualBox and Baker

@@ -1,8 +1,8 @@
-[Shells](Shells.md#shells) | [Development Environments](PackageManagers.md#development-environments) |  [Git](Git.md#git) | [Virtural Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming Languages](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools) | [Specialized Tools](SpecializedTools.md#specialized-tools) 
+[Shells](Shells.md#shells) | [Development Environments](PackageManagers.md#development-environments) |  [Git](Git.md#git) | [Virtural Environments](Environments.md#environments) | [Markdown and IDEs](MarkdownEditors.md#markdown) | [Programming Languages](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools) | [Specialized Tools](SpecializedTools.md#specialized-tools) 
 
 # Markdown
 
-Is a plain text format that can be used to express stylized text rendered as html (or even pdf). It is commonly used in online tools such as Github to make it easier to write reports or documentation. You can mix and match html with markdown, but there are limits, e.g. including a link to a css file.
+Is a plain text format that can be used to express stylized text rendered as html (or even pdf). It is commonly used in online tools such as Github to make it easier to report issues or write documentation. You can mix and match html with markdown, but there are limits, e.g. including a link to a css file.
 
 How about an example. The following markdown syntax, would appear as follows:
 
@@ -101,16 +101,7 @@ There are many different "flavors" of markdown. [Github-flavored markdown](https
 | Memory usage per node | 100 MB | 250 MB | 100 MB |
 | Input per node | 5 GB | 6 GB | 3GB |
 
-### Editors
-
-If you're still opening and editing files in Notepad.exe, let's show you a better way.
-
-When editing markdown and code scripts, features such as syntax highlighting, autocomplete, and advanced find and replace tools are essential!
-
-![image](https://cloud.githubusercontent.com/assets/742934/15635554/4360c340-25af-11e6-9d9c-c6ffe4b6b5be.png)
-
-
-##### Markdown editors
+### Markdown editors
 
 * Online: Github's built in editors are great for simple Markdown editing!
 * Online: Also see: http://dillinger.io/
@@ -119,36 +110,95 @@ When editing markdown and code scripts, features such as syntax highlighting, au
 * Windows: [MarkdownPad 2](http://markdownpad.com/download.html)  
   If you have trouble seeing a html preview, you may need to install the [Awesomium SDK](http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe). More details [here](http://markdownpad.com/faq.html#livepreview-directx). Restart Markdown Pad 2 after install.
 
-##### Code Editors
+
+
+## Integrated development environments (IDEs)
+
+> *If you're still opening and editing files in Notepad.exe, let's show you a better way!*
+
+IDEs are an important part of a professional programming environment. You can perform many tasks such as editing, refactoring, compiling, testing, and debugging. IDEs also usually support an extensive set of plugins that help you integrate with other tools, such as maven, or performing style checking of your code.
+
+**Action: Install Eclipse**
+
+Install the latest version of Eclipse, selecting the version `Eclipse IDE for Java EE Developers `. https://www.eclipse.org/downloads/packages/
+
+You can see more steps for configuring Eclipse [here, under Phase 4: Eclipse Setup](https://pages.github.ncsu.edu/engr-csc326-staff/326-course-page/install/).
+
+#### Lightweight IDEs/editors
+
+While traditional IDEs such as Visual Studio or Eclipse are industry standards, that's not the only option out there!
+
+If you need to quickly edit code scripts, html, or markdown, features such as syntax highlighting, autocomplete, and advanced find and replace tools are essential! However, _you may not want to fire up Eclipse to change just one character_. Here are some alternative IDEs to consider.
+
+![image](https://cloud.githubusercontent.com/assets/742934/15635554/4360c340-25af-11e6-9d9c-c6ffe4b6b5be.png)
 
 * [Code](https://code.visualstudio.com/)
 * [Atom](https://atom.io/)
 * [Sublime Text](https://www.sublimetext.com/)
 * Level up vim: Put some of these stuff in [your vimrc](http://amix.dk/vim/vimrc.html).
-* ... Send pull request.
+* ... Missing something? Send a pull request.
 
-## Practice: Create an About me Page
+## Practice: Create an About Me Page
 
-#### Step 1: Create a Markdown Page
-
-Add a AboutMe.md file to your data challenge repo. Include the following details:
+Update your README.md. Using your new markdown skills, include the following details:
 
 * Something about you.
-* Where you are from and your school.
+* Where you are from.
 * A picture.
 * A list of skills
-* A link to your mentor
 * If brave, a table and a favorite code snippet.
 
-#### Step 2: gh-pages
+Commit and push the code to your Project0.
 
-* Create a branch in you data challenge repo, called "gh-pages"
-* Switch to gh-pages branch
-* Using pandoc or dilliger.io export, create a html version of your markdown file.
-* Commit and push a AboutMe.html file
+## Advanced: Creating a WebPage using GitHub Pages
 
-Example: You can see how the branch  
-Gh-Pages: https://github.com/StartupBot/MobileTouch/tree/gh-pages  
-will point to the website: http://startupbot.github.io/MobileTouch/  
+You can use GitHub Pages to host static (generated) web content. A typical pattern is to keep your source materials (markdown/templates) on your master branch, while keeping your generated content (html/js/css) on a `gh-pages` branch. 
 
-Advanced: You can use a static site generator such as jekyll to generate html from markdown and push to your github pages.
+Let's practice creating a hosted version of your site. Bonus: It is also great practice of your git knowledge.
+
+### Pandoc
+
+First, let's download a simple tool that can help us translate markdown => html. Using a package manager, download `pandoc`. e.g. for Windows, `choco install pandoc`.
+
+Test out using pandoc on your README.md
+
+```
+pandoc README.md
+```
+
+You should see html output on the console. Before we try keeping this content, let's prepare our gh-pages branch.
+
+### Creating gh-pages
+
+You can create a new branch using `git branch gh-pages`. Do you remember which command we should use to switch branches?
+
+...
+
+Use `git checkout gh-pages`. You should see that you have switched to the gh-pages branch. Confirm with `git branch`. You should see an asterisk next to gh-pages.
+
+Using the stdout redirect operator `>`, you should be able to run `pandoc` again, but write to a new file `index.html`. Stage and commit the new file.
+
+Let's get dangerous. *Remember*, we do not want source content in our gh-pages, so that means you can delete your README.md when you are in the gh-pages branch.
+
+Push your changes.
+
+### Viewing GitHub Pages
+
+You should now be able to see your html file on GitHub!
+
+For GitHub, your page will be available at the following url:
+
+```
+http://<user>.github.io/<repo>/index.html
+```
+
+For example, see:
+
+* website: http://startupbot.github.io/MobileTouch/  
+* gh-pages: https://github.com/StartupBot/MobileTouch/tree/gh-pages 
+
+For GitHub Enterprise, your page will be available at the following url:
+
+```
+http://pages.github.ncsu.edu/<user>/<repo>/index.html
+```
