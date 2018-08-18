@@ -32,13 +32,11 @@ http://explainshell.com/explain?cmd=tar+-zxvf
 
 ## Shell Basics
 
-Depending on your operating system and desktop manager, you have many ways to open up a shell. There may even been several different choices for shell programs.
+Depending on your operating system and desktop manager, you have many ways to open up a shell. There may even be several different choices for shell programs.
 
 ### Accessing and Using Shells
 
 Mac: you can run the Terminal in Applications. 
-
-IDES, such as VS Code provide easy access to a terminal (View => Terminal).
 
 Windows: *Shell options*. In windows, you can use Cmd, Powershell, or emulated shells (Bash for Git, Bash with Linux Subsystem). A downside to using an emulated shell is that you may be limited in accessing other executables/environments on windows.
 
@@ -47,6 +45,8 @@ Windows: *Opening*. You access a shell in several ways. You can right click on t
 Windows: *Admin shell*. Some commands require adminstration privileges. If you need to run a command with admin, you must start a shell with admin privilege. There is typically an admin command shell available in the menu when right clicking the Windows Icon on the Task Bar. You can also get one from right clicking the Cmd executable in the search bar.
 
 Tip: If opening up a cmd shell in admin mode, make sure you do not perform operations, such as `git clone` in your current directory (`C:\WINDOWS\system32`). Otherwise, you will be writing to a location that only admin will have access to which will make it difficult to run the commands/tasks you are intending on doing.
+
+Tip: IDES, such as VS Code provide easy access to a terminal (View => Terminal).
 
 ### Commands
 
