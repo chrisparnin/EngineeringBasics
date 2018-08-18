@@ -158,7 +158,7 @@ Finally, you can enable access to an environment variable for all processes and 
 
 > *Permenant environment variables are actually more tricky in Mac/Linux shells!*
 
-When a shell is initialized, several startup scripts are run to customization and initialization. If you want to make a variable always available, a common strategy is to locate one of these initialization scripts (typically in your home directory, and editing them to run your commands on startup). Common locations include: `.profile`, or `.bashrc`.
+When a shell is initialized, several startup scripts are run for customization and initialization. If you want to make a variable always available, a common strategy is to locate one of these initialization scripts (typically in your home directory, and editing them to run your commands on startup). Common locations include: `~/.profile`, or `~/.bashrc`. The symbol `~`, is a shortcut for your home directory: `/home/<user>`.
 
 To summarize (Mac/Linux):
 
