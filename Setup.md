@@ -57,7 +57,7 @@ See if you can find the packages for these tools with your package manager and i
 * nodejs
 * python2
 
-Tip: If you install Git on Windows, make sure to have add the git utils to your PATH. This will access to many GNU commands in Windows.
+Tip: If you install Git on Windows, make sure to add git util bins to your PATH. This provide will access to many GNU commands in Windows.
 
 ## Optional: Make Windows Just as Awesome
 
