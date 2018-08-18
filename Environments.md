@@ -1,81 +1,151 @@
 [Shells](Shells.md#shells) | [Development Environments](PackageManagers.md#development-environments) |  [Git](Git.md#git) | [Virtural Environments](Environments.md#environments) | [Markdown and Editors](MarkdownEditors.md#markdown) | [Programming Languages](Programming.md#programming) | [Task Management](OnlineTools.md#online-tools) | [Specialized Tools](SpecializedTools.md#specialized-tools) 
 
-# Virtual Environments
+# Computing Environments
 
-Creating computing and development environments will be an essential skill for processing and manipulating data with tools and code. Unfortunately, consistently getting software installed on a your computer and correctly setting up the environments can take away weeks of your productive time.
+Creating computing and development environments will be an essential skill for software engineering. Unfortunately, consistently getting software installed on a your computer and correctly setting up the environments can take away weeks of your productive time.
 
-Virtual environments can provide a useful solution for automating the creating and management of your computing environment and development workflow. Lets setup a simple machine.
+Virtual machines/containers can provide a useful solution for automating the creation and management of your computing environment and development workflow. Unfortunately, when developers think about virtual machines, a common idea that comes to mind is a dedicated heavy-weight virtualized system with a full graphics Desktop. Alternatively, you may think of dual-booted systems. While these types of systems can be useful, the goal of this workshop is to introduce you to a different concept for software development.
 
-## Creating Virtual Machine
+## A philosophy: Be able to throw away your machine and still code
 
-* Install [vagrant](https://www.vagrantup.com/downloads.html).
-* Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) is a recommended provider.
-  Other [virtual machine providers](https://docs.vagrantup.com/v2/providers/) do exist.
+> Code that only runs on your machine is useful to no one else
 
-When you create a VM with vagrant, it will create a Vagrantfile in your current directory as well as a hidden directory (.vagrant).
-Vagrant only allows one virtual machine configuration per directory. You will want to organize your VMs:
+With computing environments, we are able to automate the specification of our our environment for running our code, which makes it easier for us to recreate and share our computing environments with others on a new machine.
 
-* `mkdir -p /boxes/workshop`; `cd /boxes/workshop`
+To use a computing environment, you can use your host operating system to write code, interact with the running program, and visualize its executions. But you avoid execution code on your own machine itself---that all happens inside the computing environment.
 
-Initialize a virtual machine. `ubuntu/trusty64` is one default image. A list of other virtual machine images can be found [here](https://atlas.hashicorp.com/boxes/search).
+> Computing environments are for running code, not writing code.
 
-    vagrant init ubuntu/trusty64
+To accomplish this, we use a set of tools to enable you to map files and program between your host environment and computing environment. 
 
-Start up the virtual machine.
+## Creating a Virtual Machine
 
-    vagrant up
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads) is a lightweight virtualization provider. It is very effective for creating *headless* virtual machines that run without any GUI/Desktop interface.
 
-Then    
+Install VirtualBox.
 
-    vagrant ssh
+Windows: If you're running Hyper-V and VirtualBox, and you're experiencing crashes when you try to start a VM, you may need to [turn off Hyper-V](https://superuser.com/questions/540055/convenient-way-to-enable-disable-hyper-v-in-windows-8) (which exclusively locks use of CPU for virtualization).
 
-You should be able to connect to the machine.
+#### Manual creation
 
-#### Windows help
+While it is possible to use the VirtualBox GUI to manually install a virtual machine (and run through the OS installation script); this is not an effective automation approach!
 
-* If you're running Hyper-V and VirtualBox, and you're experiencing crashes when you try to start a VM, you may need to turn off Hyper-V (which exclusively locks use of CPU for virtualization).
-* If you can't run vagrant ssh, Add `C:\Program Files\Git\usr\bin` to your PATH, which includes `ssh`.
+#### Baker
 
-## Vagrantfile
+With [Baker](https://getbaker.io), you can create a virtual machine with a simple configuration file.
 
-The Vagrantfile will contain some settings you can adjust for memory, networking, etc.
-Two customizations you may consider making if working with your VM long-term:
+For example, we could create a new `baker.yml` file, with the following contents:
 
-* 1) Enable a synced folder. This will allow you to edit code/files from editors in your host OS.
-* 2) Fix DNS to use the same as your host OS instead of its own.
-
-```ruby
-  # Important, you must run vagrant in an admin shell if you want symlinks to work correctly.
-  # i.e., for npm install to work properly, you must have vagrant provision the machine in admin cmd prompt.
-  config.vm.synced_folder "C:/dev", "/code"
-  config.vm.synced_folder "C:/projects", "/projects"
-
-  config.vm.provider :virtualbox do |vb|
-     # fix crappy dns
-     # https://serverfault.com/questions/453185/vagrant-virtualbox-dns-10-0-2-3-not-working
-     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-  end
+```
+name: baker-example
+vm:
+  memory: "1024"
 ```
 
-## Virtualbox Networking
+By running `baker bake`, you can create this virtual machine in VirtualBox and interact with it through it `baker ssh`. Your current directly on your computer will be accessible inside the virtual machine through a shared folder. This allows you to edit/code directly on your computer while still being able to run commands/services in a Baker environment.
 
-In virtualbox, VMs typically have [four ways](http://catlingmindswipe.blogspot.com/2012/06/how-to-virtualbox-networking-part-two.html) to set up the network:
-- Network Address Translation (NAT), *which is the default*,
-- Bridged,
-- Internal network
-- Host Only (Recommended).
+## Using Baker
 
-Unlike the first virtual machine, you cannot use the default mode, because there will be no way for the workshop VM to talk to the node VM. Instead, you much choose between bridged or host-only.
+Cool. But how do I get tools or programming languages installed in a Baker environment? _Bakelets_ are modules that can be added to a baker environment. There are many modules available, and you can even add your own custom modules.
 
-Private networking (Host-only) is the recommended setting for Linux/Mac/Windows 10. **Bonus**: You can use hard-coded ip address in your scripts. Uncomment the following line in Vagrantfile:
+Here is an example Baker environment with the python bakelet.
 
-```ruby
-config.vm.network "private_network", ip: "192.168.33.10"
+``` yml
+name: baker-example
+vm:
+  memory: "1024"
+lang:
+  - python2
 ```
 
-Then run, `vagrant reload`. 
+But can we do more?
 
-## Doing it once again (Practice).
+## Baker Commands
 
-* Create a new VM with vagrant in /boxes/mysql.
-* Enable private networking, but with a different ip address.
+Imagine your project is using a tool, such as mkdocs, to manage your documentation for your site. You want a way to easy run commands in the Baker environment without having to directly ssh into the environment. With Baker *commands*, you can add a set of actions that can be performed inside the Baker environment. By default, baker commands will run with the shared project folder as the current working directory.
+
+``` yml
+name: baker-docs
+vm: 
+  ip: 192.168.22.30
+lang:
+  - python2
+commands:
+  build: mkdocs build
+  serve: mkdocs serve -a 0.0.0.0:8000
+  gh-deploy: mkdocs gh-deploy
+```
+
+For example, by running `baker run serve`, you will be able to local edit and preview your live documentation site by visiting 192.168.22.30:8000 in your browser.
+
+Note: Baker is beta software, an alternative (but more difficult) tool to consider is [vagrant](https://www.vagrantup.com/).
+
+## Optional: Creating environment for CoffeeMaker
+
+Clone this repository:
+https://github.com/ottomatica/baker-examples/
+
+CoffeeMaker is a simple web-based Java application that serves up coffee ingredients and receipes. Inside the directory `baker/examples/headless-chrome-selenium/` there is a lightweight version of the program, called "CoffeeMaker-Lite". In this version of CoffeeMaker, the DB and other functionality has been removed in order to keep this application simple.
+
+This codebase has several requirements: It needs Java 1.8 JDK installed, maven, and a headless version of chrome running. A set of selenium tests will use the ChromeDriver to verify the _limited_ functionality of the web app.
+
+### Baker environment
+
+The following baker.yml sets up Java 8, maven, and Google Chrome automatically.
+
+``` yaml
+name: headless-selenium
+vm:
+  ip: 192.168.9.11
+lang:
+  - java8
+tools:
+  - maven
+packages:
+  - apt:
+    - google-chrome-stable:
+        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+commands:
+  unit-test: cd CoffeeMaker-Lite/; mvn test
+  web-test: cd Selenium-Tests/; mvn test
+  serve: cd CoffeeMaker-Lite/; mvn spring-boot:run
+```
+
+### Try it out
+
+Create the vm.
+
+``` bash
+baker bake
+```
+
+Start up the web app.
+
+``` bash
+baker run serve
+```
+
+Visiting the site at http://192.168.9.11:8080, will allow you to interact with the web app.
+
+Now, run the selenium tests, which will use chrome.
+
+``` bash
+baker run web-test
+```
+
+You should see the following results.
+
+```
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.512 s
+[INFO] Finished at: 2018-08-11T00:32:30+00:00
+[INFO] Final Memory: 13M/32M
+[INFO] ------------------------------------------------------------------------
+```
+
