@@ -1,5 +1,4 @@
-[Setup](Setup.md#setup) | [Shells](Shells.md#shells) |  [Git](Git.md#git) | [Markdown and IDEs](MarkdownEditors.md#markdown) |  [Virtural Environments](Environments.md#environments) | [Task Management](OnlineTools.md#online-tools)
-
+[Setup](Setup.md#setup) | [Shells](Shells.md#shells) |  [Git](Git.md#git) | [Markdown and IDEs](MarkdownEditors.md#markdown) |  [Virtual Environments](Environments.md#environments) | [Task Management](OnlineTools.md#online-tools)
 # Task Management
 
 In software engineering work there is often many intangible sets of things *todo* that have to be captured, assigned, prioritized, and tracked. Stickies are not going to cut it!
