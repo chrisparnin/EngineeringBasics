@@ -2,6 +2,8 @@
 
 # Task Management
 
+In software engineering work there is often many intangible items of things to do that have to be captured, assigned, prioritized, and tracked. Stickies are not going to cut it!
+
 ## Github Issues
 
 Issue trackers, such as Bugzilla, originated as a bug reporting tools. A project hosted on github comes with an issue tracker too. Any one can report an issue, add labels, and assign any team member(s) can be assigned to an issue.
@@ -64,9 +66,11 @@ The main things covered in a scrum:
 * What I need to do next.
 * What is blocking me.
 
-We will be using scrums in our research lab. We will have them on Wednesdays at 9:30am.
+## Practice: Set up a Task List and Trello Board
 
-## Practice: Set up a Task List for this summer
+In your Project0 repo.
 
-* Add some issues to your data challenge repo.  (More about the data challenge later!)
-* Create a personal trello board for this summer.
+1. **Create a new issue** related to your progress on this workshop. To create the issue, you can borrow the checklist from the README.md and modify it to work for you. If you've checked off everything, then you should have mastered a great set of foundational skills preparing your for real software engineering work!
+
+2. **Create a personal Trello board** for this semester. What tasks should you be working on? Alternatively, you can play with a similiar tool: [GitHub project boards](https://help.github.com/articles/about-project-boards/).
+
