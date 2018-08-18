@@ -25,7 +25,7 @@ There are generally two flavors of package managers. *Binary* package managers t
 
 ### Installing Package Managers
 
-If you're using linux, you typically already have `yum` or `apt-get`. You can skip this step.
+If you're using Linux, you typically already have `yum` or `apt-get`. You can skip this step.
 
 ##### Installing HomeBrew on Mac OS X
 
@@ -40,7 +40,7 @@ brew install wget
 
 Chocolatey is a package manager for Windows. 
 
-Follow the instructions on the Chocolatey website to install. https://chocolatey.org/install](https://chocolatey.org/install)
+Follow the instructions on the [Chocolatey website](https://chocolatey.org/install) to install. 
 Once Chocolatey is installed, you can use it to install other tools on your system using `choco install <package-name>`.  Look for the package name on the Chocolatey website.
 
 Here are some example commands
