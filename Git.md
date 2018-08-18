@@ -63,7 +63,7 @@ $ git config --global user.email email@example.com
 You might also consider an authenication strategy. If you're being asked to login everytime your pull/push to your remote repository, you might want to enable caching of your credentials. For example, you could use: 
 
 ```
-git config credential.helper store
+git config --global credential.helper store
 ```
 
 However, this may store your credentials in plain text on your computer. There are other platform-specific credential.helpers that you can use to more securely store your credentials. It is also possible to generate [personal access tokens](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) that you can use authenicate instead of a passcode.
