@@ -26,6 +26,7 @@ The primary goal of this workshop is for you have to have installed and learned 
    Overview of markdown basics, lists, code, tables. Recommended editors for code. Creating Github Pages.
    - [ ] Install IDE(s)/Editors
    - [ ] Practice: Update markdown in README.md
+   - [ ] Practice: Familizarize yourself with some of Eclipse's advanced features and then use them to [fix a few bugs](https://github.ncsu.edu/kpresle-tools/EclipseTutorial).
    - [ ] Optional: Create a GitHub Pages (gh-pages branch) 
 5. [Virtual Environments](Environments.md#Environments)  
    Tools for creating and managing virtual computing environments.
