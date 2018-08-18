@@ -2,7 +2,7 @@
 
 # Task Management
 
-In software engineering work there is often many intangible items of things to do that have to be captured, assigned, prioritized, and tracked. Stickies are not going to cut it!
+In software engineering work there is often many intangible sets of things *todo* that have to be captured, assigned, prioritized, and tracked. Stickies are not going to cut it!
 
 ## Github Issues
 
