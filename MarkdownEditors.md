@@ -124,7 +124,7 @@ Install the latest version of Eclipse, selecting the version `Eclipse IDE for Ja
 
 You can see more steps for configuring Eclipse [here, under Phase 4: Eclipse Setup](https://pages.github.ncsu.edu/engr-csc326-staff/326-course-page/install/).
 
-** Action: Practice with Eclipse **
+**Action: Practice with Eclipse**
 When you're done, [practice](https://github.ncsu.edu/kpresle-tools/EclipseTutorial) some of the neat features that Eclipse offers with a workshop we've put together.
 
 #### Lightweight IDEs/editors
