@@ -42,7 +42,7 @@ vm:
   memory: "1024"
 ```
 
-By running `baker bake`, you can create this virtual machine in VirtualBox and interact with it through it `baker ssh`. Your current directly on your computer will be accessible inside the virtual machine through a shared folder. This allows you to edit/code directly on your computer while still being able to run commands/services in a Baker environment.
+By running `baker bake`, you can create this virtual machine in VirtualBox and interact with it through it `baker ssh`. Your current directory on your computer will be accessible inside the virtual machine through a shared folder. This allows you to edit/code directly on your computer while still being able to run commands/services in a Baker environment.
 
 ## Using Baker
 
@@ -62,7 +62,7 @@ But can we do more?
 
 ## Baker Commands
 
-Imagine your project is using a tool, such as mkdocs, to manage your documentation for your site. You want a way to easy run commands in the Baker environment without having to directly ssh into the environment. With Baker *commands*, you can add a set of actions that can be performed inside the Baker environment. By default, baker commands will run with the shared project folder as the current working directory.
+Imagine your project is using a tool, such as mkdocs, to manage your documentation for your site. You want a way to easily run commands in the Baker environment without having to directly ssh into the environment. With Baker *commands*, you can add a set of actions that can be performed inside the Baker environment. By default, baker commands will run with the shared project folder as the current working directory.
 
 ``` yml
 name: baker-docs
