@@ -110,6 +110,7 @@ Windows: `clip < file.txt` Mac: `pbcopy < file.txt`
 * Estimate number of contents: `cat posts--2016-04-01_14-36-24-UTC.csv | wc -l`
 
 Missing wget? https://chocolatey.org/packages/Wget
+Alternative dataset: https://github.com/vincentarelbundock/Rdatasets/tarball/master
 
 ## Environment Variables
 
