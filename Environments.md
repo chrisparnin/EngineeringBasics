@@ -39,7 +39,8 @@ For example, we could create a new `baker.yml` file, with the following contents
 ```
 name: baker-example
 vm:
-  memory: "1024"
+  memory: 1024
+  ip: 192.168.20.40
 ```
 
 By running `baker bake`, you can create this virtual machine in VirtualBox and interact with it through it `baker ssh`. Your current directory on your computer will be accessible inside the virtual machine through a shared folder. This allows you to edit/code directly on your computer while still being able to run commands/services in a Baker environment.
@@ -53,99 +54,10 @@ Here is an example Baker environment with the python bakelet.
 ``` yml
 name: baker-example
 vm:
-  memory: "1024"
+  memory: 1024
+  ip: 192.168.20.40
 lang:
   - python2
 ```
 
-But can we do more?
-
-## Baker Commands
-
-Imagine your project is using a tool, such as mkdocs, to manage your documentation for your site. You want a way to easily run commands in the Baker environment without having to directly ssh into the environment. With Baker *commands*, you can add a set of actions that can be performed inside the Baker environment. By default, baker commands will run with the shared project folder as the current working directory.
-
-``` yml
-name: baker-docs
-vm: 
-  ip: 192.168.22.30
-lang:
-  - python2
-commands:
-  build: mkdocs build
-  serve: mkdocs serve -a 0.0.0.0:8000
-  gh-deploy: mkdocs gh-deploy
-```
-
-For example, by running `baker run serve`, you will be able to local edit and preview your live documentation site by visiting 192.168.22.30:8000 in your browser.
-
-Note: Baker is beta software, an alternative (but more difficult) tool to consider is [vagrant](https://www.vagrantup.com/).
-
-## Optional: Creating environment for CoffeeMaker
-
-Clone this repository:
-https://github.com/ottomatica/baker-examples/
-
-CoffeeMaker is a simple web-based Java application that serves up coffee ingredients and receipes. Inside the directory `baker/examples/headless-chrome-selenium/` there is a lightweight version of the program, called "CoffeeMaker-Lite". In this version of CoffeeMaker, the DB and other functionality has been removed in order to keep this application simple.
-
-This codebase has several requirements: It needs Java 1.8 JDK installed, maven, and a headless version of chrome running. A set of selenium tests will use the ChromeDriver to verify the _limited_ functionality of the web app.
-
-### Baker environment
-
-The following baker.yml sets up Java 8, maven, and Google Chrome automatically.
-
-``` yaml
-name: headless-selenium
-vm:
-  ip: 192.168.9.11
-lang:
-  - java8
-tools:
-  - maven
-packages:
-  - apt:
-    - google-chrome-stable:
-        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-commands:
-  unit-test: cd CoffeeMaker-Lite/; mvn test
-  web-test: cd Selenium-Tests/; mvn test
-  serve: cd CoffeeMaker-Lite/; mvn spring-boot:run
-```
-
-### Try it out
-
-Create the vm.
-
-``` bash
-baker bake
-```
-
-Start up the web app.
-
-``` bash
-baker run serve
-```
-
-Visiting the site at http://192.168.9.11:8080, will allow you to interact with the web app.
-
-Now, run the selenium tests, which will use chrome.
-
-``` bash
-baker run web-test
-```
-
-You should see the following results.
-
-```
-Results :
-
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 6.512 s
-[INFO] Finished at: 2018-08-11T00:32:30+00:00
-[INFO] Final Memory: 13M/32M
-[INFO] ------------------------------------------------------------------------
-```
-
+But can we do more? Yes! See the [baker-examples](https://github.com/ottomatica/baker-examples#baker-examples) repo.
