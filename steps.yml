@@ -1,0 +1,32 @@
+setup:
+  local: {}
+  verify: opunit verify local -c ../test/opunit.yml
+  clean: >
+    rm -f .bash_prompt .functions checker.sh random.txt zeros.txt
+    
+Shells.md: 
+  steps: 
+    # Custom prompt
+    - selectAsFile: "Create a local configuration file named => .bash_prompt"
+    - selectAndRun: "Then enable your new prompt with" 
+    # Data wrangling 
+    - selectAndRun: "Download data with"
+    - selectAndRun: Create a directory to store the tar file contents
+    - selectAndRun: "Extract the archive and verify csv files exist inside the product-hunt folder"
+    - selectAndRun: List the column headers inside the \"users.*.csv\" file
+    - selectAndRun: Extract a column of text from a file, using
+    # heredoc
+    - selectAndRun: until a delimiter string is reached
+    - selectAndRun: Load the defined function. Then we can see which command you run the most.
+    - selectAndRun: Count the number of words and characters in text
+    # Bash Scripting
+    - selectAsFile: Save this in a file called => checker.sh
+    - selectAndRun: Make sure the script file is executable
+    - selectAndRun: 
+         select: Run the script
+         expectblock: You should see output like this
+    # dd
+    - selectAndRun: Create a 1MB file with zeros.
+    - selectAndRun: Create a 20K file with random bytes.
+    # expect
+    - selectAndRun: By using expect, you can create scripts that automatically response to prompt inputs
