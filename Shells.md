@@ -401,7 +401,7 @@ dd if=/dev/urandom of=random.txt bs=2048 count=10
 
 Expect the unexpected. If you need to automate a command which could prompt for input, then you can use `expect` to help respond to that input.
 
-Just as a simple example, if you ran this code `python -c "print( input('Enter value: ') )"`, it will wait around until you typed something, which could be a problem if you're doing this 1000s of times or need to happen in some automation scripts.
+Just as a simple example, if you ran this code `python -c "print( input('Enter value: ') )"`, it will wait around until you typed something, which could be a problem if you're doing this 1000s of times or run in an automation script.
 
 By using expect, you can create scripts that automatically response to prompt inputs.
 
@@ -415,13 +415,71 @@ expect <<- END
 END
 ```
 
-Expect is pretty tricky to learn how to use properly, but it is a nice trick to hold in case you need it one day.
+Expect is pretty tricky to learn how to use properly, but it is a nice trick to hold on to in case you need it one day.
 
 ### Traps
 
+Using traps for [resource cleanup](http://redsymbol.net/articles/bash-exit-traps/), or implementing a singleton process.
 
+Save the following in 'server.sh'.
 
-### Tmux
+```
+#!/bin/bash
+
+LOCKFILE=510-bash.lock
+
+# Exit if lockfile 
+[ -f $LOCKFILE ] && echo "Lockfile is in use. Exiting..." && exit 1 
+
+# Upon exit, remove lockfile.
+function cleanup
+{
+    echo "cleaning up"
+    rm -f $LOCKFILE
+    exit 0
+}
+
+# Initiate the trap
+trap cleanup EXIT
+
+# Create lockfile
+touch $LOCKFILE
+
+# Program (listen on port 5100)
+nc -k -l 5100 | bash
+```
+
+Make it executable.
+
+```bash
+chmod +x server.sh
+```
+
+This run a simple bash server that you can send commands to over the network.
+
+```bash
+./server.sh
+```
+
+In a new terminal window, run:
+
+```bash
+echo "ls" >/dev/tcp/127.0.0.1/5100
+```
+
+You should see your direct connects appear in your other terminal running the server process. If you try running `./server.sh` in another terminal, it should prevent you from running again.
+
+## Remote connections
+
+In many situations, you may find that you need to run commands for development or debugging on remote servers. Most likely, you will initate this connection over a ssh connection.
+
+### tmux
+
+When issuing a long running command (package installation, build job), you may find your connection drop, which could result in termination of your command!
+
+A useful strategy to avoid this is to use a session manager, such as `screen` or `tmux`. These tools will allow you to create sessions that will persist on the server, allowing you to run commands, disconnect, and return again.
+
+Here is a useful [reference](http://hyperpolyglot.org/multiplexers).
 
 |  | screen |	tmux|
 |--|--------|-------|
