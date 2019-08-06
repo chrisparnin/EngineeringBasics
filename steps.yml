@@ -31,9 +31,9 @@ Shells.md:
     # expect
     - selectAndRun: By using expect, you can create scripts that automatically response to prompt inputs
     # traps
-    # - selectAsFile: 
-    #      select: "Save the following in 'server.sh' and make it executable => server.sh"
-    #      permission: 'x'
+    - selectAsFile: 
+         select: "Save the following in 'server.sh' and make it executable => server.sh"
+         permission: 'x'
     - selectAndServe: This will run a simple bash server that you can send commands to over the network.
     - selectAndRun: "In a new terminal window, run:"
 
