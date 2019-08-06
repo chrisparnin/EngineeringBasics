@@ -2,7 +2,7 @@ setup:
   local: {}
   verify: opunit verify local -c ../test/opunit.yml
   clean: >
-    rm -f .bash_prompt .functions checker.sh random.txt zeros.txt
+    rm -f .bash_prompt .functions checker.sh random.txt zeros.txt server.sh
     
 Shells.md: 
   steps: 
@@ -30,3 +30,11 @@ Shells.md:
     - selectAndRun: Create a 20K file with random bytes.
     # expect
     - selectAndRun: By using expect, you can create scripts that automatically response to prompt inputs
+    # traps
+    # - selectAsFile: 
+    #      select: "Save the following in 'server.sh' and make it executable => server.sh"
+    #      permission: 'x'
+    - selectAndServe: This will run a simple bash server that you can send commands to over the network.
+    - selectAndRun: "In a new terminal window, run:"
+
+

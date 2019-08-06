@@ -421,7 +421,7 @@ Expect is pretty tricky to learn how to use properly, but it is a nice trick to 
 
 Using traps for [resource cleanup](http://redsymbol.net/articles/bash-exit-traps/), or implementing a singleton process.
 
-Save the following in 'server.sh'.
+Save the following in 'server.sh' and make it executable.
 
 ```
 #!/bin/bash
@@ -449,13 +449,7 @@ touch $LOCKFILE
 nc -k -l 5100 | bash
 ```
 
-Make it executable.
-
-```bash
-chmod +x server.sh
-```
-
-This run a simple bash server that you can send commands to over the network.
+This will run a simple bash server that you can send commands to over the network.
 
 ```bash
 ./server.sh
