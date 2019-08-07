@@ -137,7 +137,6 @@ If you need to quickly edit code scripts, html, or markdown, features such as sy
 
 * [Code](https://code.visualstudio.com/)
 * [Atom](https://atom.io/)
-* [Sublime Text](https://www.sublimetext.com/)
 * Level up vim: Put some of these stuff in [your vimrc](http://amix.dk/vim/vimrc.html).
 * ... Missing something? Send a pull request.
 
