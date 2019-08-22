@@ -12,7 +12,7 @@
        - product-hunt/posts--2016-04-01_14-36-24-UTC.csv
      - contains:
          file: product-hunt/data-a1.txt
-         string: id;created_at;name;username;image;headline;invited_by_id;followers_count;followings_count;votes_count;posts_count;maker_of_count;comments_count;profile_url
+         string: "14"
      - contains:
          file: product-hunt/data-a2.txt
          string: "42"
