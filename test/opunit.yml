@@ -18,4 +18,4 @@
          string: "42"
      - contains:
          file: product-hunt/data-a3.txt
-         string: "Pexels 2.0;The best free stock photos in one place"
+         string: "Startup Stash;A curated directory of 400 resources & tools for startups"
