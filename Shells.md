@@ -178,11 +178,11 @@ cut -f 2 -d ';' product-hunt/posts*.csv | head
 
 #### Exercise
 
-Using a combination of `cut`, `wc`, `head`, `tail`, `grep`, `sort`, `uniq`, pipes (`|`) and any other unix suitable commands, create a command that calculates the following. For each task, save the answers results in a file named, `data-ans1.txt`, `data--ans2.txt`, and so on...
+Using a combination of `cut`, `wc`, `head`, `tail`, `grep`, `sort`, `uniq`, pipes (`|`) and any other unix suitable commands, create a command that calculates the following. For each task, save the answers results in a file named, `data-a1.txt`, `data--a2.txt`, and so on...
 
-* Count the number of columns inside the "users.*.csv" file. [data-ans1.txt]
-* Count the number of times "bitcoin" is referenced inside a the post's file "tagline" column. [data-ans2.txt]
-* Find the row of post with the highest number of upvotes. [data-ans3.txt]
+* Count the number of columns inside the "users.*.csv" file. [data-a1.txt]
+* Count the number of times "bitcoin" is referenced inside a the post's file "tagline" column. [data-a2.txt]
+* Find the row of post with the highest number of upvotes. [data-a3.txt]
 
 Verify answers with `opunit verify local`.
 
