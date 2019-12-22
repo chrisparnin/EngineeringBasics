@@ -10,7 +10,7 @@ Virtual machines/containers can provide a useful solution for automating the cre
 
 > Code that only runs on your machine is useful to no one else
 
-With computing environments, we are able to automate the specification of our our environment for running our code, which makes it easier for us to recreate and share our computing environments with others on a new machine.
+With computing environments, we are able to automate the specification of our environment for running our code, which makes it easier for us to recreate and share our computing environments with others on a new machine.
 
 To use a computing environment, you can use your host operating system to write code, interact with the running program, and visualize its executions. But you avoid execution code on your own machine itself---that all happens inside the computing environment.
 
@@ -24,7 +24,23 @@ To accomplish this, we use a set of tools to enable you to map files and program
 
 Install VirtualBox.
 
-Windows: If you're running Hyper-V and VirtualBox, and you're experiencing crashes when you try to start a VM, you may need to [turn off Hyper-V](https://superuser.com/questions/540055/convenient-way-to-enable-disable-hyper-v-in-windows-8) (which exclusively locks use of CPU for virtualization).
+> Windows: If you're running Hyper-V and VirtualBox, and you're experiencing crashes when you try to start a VM, you may need to [turn off Hyper-V](https://superuser.com/questions/540055/convenient-way-to-enable-disable-hyper-v-in-windows-8) (which exclusively locks use of CPU for virtualization).
+
+### Ensure virtualization is enabled
+
+To be able to run virtual machines, your machine needs to support virtualization. 
+Ensure virtualization (Intel VT-x or AMD-V) is enabled on your system using the instructions for your operating system:  
+- **Windows:** open Task Manager and go to Performance tab, and you should see virtualization is enabled. ![Windows-TaskManager](resources/imgs/win-taskmanager.jpg)  
+- **Mac:** run the command below to see the list of supported CPU flags. If you see **VMX**, your machine supports hardware virtualization:  
+   ```
+   sysctl -a | grep machdep.cpu.features | grep VMX
+   ```
+   ![mac-cpu-flags](resources/imgs/mac-cpu-flags.png)  
+- **Linux:** run the command below to see the list of supported CPU flags. If you see **VMX** or **SVM** flag, youre machine supports hardware virtualization:
+   ```
+   grep -E "vmx|svm" /proc/cpuinfo
+   ```
+   ![linux-cpu-flags](resources/imgs/linux-cpu-flags.png)
 
 #### Manual creation
 
