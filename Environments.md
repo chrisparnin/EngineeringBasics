@@ -51,34 +51,45 @@ Ensure virtualization (Intel VT-x or AMD-V) is enabled on your system using the 
 
 While it is possible to use the VirtualBox GUI to manually install a virtual machine (and run through the OS installation script); this is not an effective automation approach!
 
-#### Baker
+#### bakerx
 
-With [Baker](https://getbaker.io), you can create a virtual machine with a simple configuration file.
 
-For example, we could create a new `baker.yml` file, with the following contents:
+## Installations
 
 ```
-name: baker-example
-vm:
-  memory: 1024
-  ip: 192.168.20.40
+git clone https://github.com/ottomatica/bakerx
+cd bakerx
+npm install
+npm link
 ```
 
-By running `baker bake`, you can create this virtual machine in VirtualBox and interact with it through it `baker ssh`. Your current directory on your computer will be accessible inside the virtual machine through a shared folder. This allows you to edit/code directly on your computer while still being able to run commands/services in a Baker environment.
+## Using `bakerx`
 
-## Using Baker
+### Pulling images
 
-Cool. But how do I get tools or programming languages installed in a Baker environment? _Bakelets_ are modules that can be added to a baker environment. There are many modules available, and you can even add your own custom modules.
+First, you need to pull an existing virtual machine image from a registry. Registries are basically the assets in a GitHub repository releases. Then you can pull an image by running the following commands:
 
-Here is an example Baker environment with the python bakelet.
-
-``` yml
-name: baker-example
-vm:
-  memory: 1024
-  ip: 192.168.20.40
-lang:
-  - python2
+```
+bakerx pull ottomatica/slim#images alpine3.9-simple
 ```
 
-But can we do more? Yes! See the [baker-examples](https://github.com/ottomatica/baker-examples#baker-examples) repo.
+See [slim](https://github.com/ottomatica/slim) for instructions on how to create and publish an image. 
+
+### Creating VMs
+
+After pulling images, you can create VMs that run those images. Simply run the command below:
+
+```
+bakerx run example_alpine_vm alpine3.9-simple --memory 2048
+```
+
+> The `--memory | -m` flag is optional, and can be used to set the amount of shared memory with your virtual machine.
+
+### Connecting to VMs
+
+Finally, bakerx will give you an `ssh` command similar to what is shown below, which you can use to connect to the VM.
+```
+ssh -i /home/samim/.baker/baker_rsa root@127.0.0.1 -p 2003 -o StrictHostKeyChecking=no
+```
+
+> bakerx uses port forwarding to connect to the VMs, so you need to specify the port, `-p`, when running the ssh command. 
