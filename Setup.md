@@ -87,7 +87,7 @@ opunit requires [node.js](https://nodejs.org/en/) to be installed.
 You can then install using npm:
 
 ```bash
-npm install opunit -g
+npm install ottomatica/opunit -g
 ```
 
 ### Checking your local machine
