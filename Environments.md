@@ -89,4 +89,4 @@ Finally, bakerx will give you an `ssh` command similar to what is shown below, w
 bakerx ssh example_alpine_vm
 ```
 
-> bakerx uses port forwarding to connect to the VMs, so you need to specify the port, `-p`, when running the ssh command. 
+> bakerx uses port forwarding to connect to the VMs, so you need to specify the port, `-p`, when directly running the ssh command. 
