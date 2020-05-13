@@ -57,10 +57,7 @@ While it is possible to use the VirtualBox GUI to manually install a virtual mac
 ## Installations
 
 ```
-git clone https://github.com/ottomatica/bakerx
-cd bakerx
-npm install
-npm link
+npm install ottomatica/bakerx -g
 ```
 
 ## Using `bakerx`
