@@ -77,7 +77,7 @@ See [slim](https://github.com/ottomatica/slim) for instructions on how to create
 After pulling images, you can create VMs that run those images. Simply run the command below:
 
 ```
-bakerx run example_alpine_vm alpine3.9-simple --memory 2048
+bakerx run example_alpine_vm alpine3.9-simple --memory 1024
 ```
 
 > The `--memory | -m` flag is optional, and can be used to set the amount of shared memory with your virtual machine.
@@ -86,7 +86,7 @@ bakerx run example_alpine_vm alpine3.9-simple --memory 2048
 
 Finally, bakerx will give you an `ssh` command similar to what is shown below, which you can use to connect to the VM.
 ```
-ssh -i /home/samim/.baker/baker_rsa root@127.0.0.1 -p 2003 -o StrictHostKeyChecking=no
+bakerx ssh example_alpine_vm
 ```
 
 > bakerx uses port forwarding to connect to the VMs, so you need to specify the port, `-p`, when running the ssh command. 
