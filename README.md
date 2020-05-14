@@ -30,7 +30,7 @@ The primary goal of this workshop is for you have to have installed and learned 
    - [ ] Optional: Create a GitHub Pages (gh-pages branch) 
 5. [Virtual Environments](Environments.md#Environments)  
    Tools for creating and managing virtual computing environments.
-   - [ ] Install VirtualBox and Baker
+   - [ ] Install VirtualBox and Bakerx
    - [ ] Create a simple virtual machine
    - [ ] Optional: Create your own environment
 6. [Task Management](OnlineTools.md#online-tools)  
