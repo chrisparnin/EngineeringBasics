@@ -467,6 +467,25 @@ You should see your direct connects appear in your other terminal running the se
 
 In many situations, you may find that you need to run commands for development or debugging on remote servers. Most likely, you will initate this connection over a ssh connection.
 
+### Running remote commands
+
+`ssh` allows you to execute commands on a remote server, such as these commands to install nodejs:
+
+```
+ssh vagrant@192.168.33.10 sudo apt-get update && sudo apt-get install nodejs -y
+```
+
+**Persistance**: If you need to change directories, you will need to do it in the same command: `cd App/ && cmd`.
+
+Otherwise, your next command will start back in the same original directory.
+
+More specifically, ssh can operate in a `shell`, `exec`, or `subsystem` [channels](https://stackoverflow.com/questions/6770206/what-is-the-difference-between-the-shell-channel-and-the-exec-channel-in-jsc). When using a shell channel, you can interactively send commands like a normal shell. A cd operation will persist. 
+
+Because you're sending commands over ssh, this is done in `exec` mode. In exec mode, each command will be executed in its own context and lose many of the shell's functionality.
+
+Finally, you can emulate some parts of a terminal using `-t or -tt` as well as combining with heredoc to input a multi-line script.
+
+
 ### tmux
 
 When issuing a long running command (package installation, build job), you may find your connection drop, which could result in termination of your command!
