@@ -4,40 +4,14 @@
 
 A shell is a computing environment where commands can be interpreted, evaluated, and its output displayed (i.e., an instance of a read–eval–print loop (REPL)). A good shell provides access to a rich set of commands and allows simple programming of commands, which can be used to create powerful scripts and tools.
 
-But with great power comes great [bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm). Commands and their options can be terse, inconsistent, and difficult to learn. A steep learning curve often prevents novices from enjoying the eventual payoff.
+```bash|{type:'command'}
+ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/ /" -e "s/-/|/"
+```
 
-## Resources
-
-If you've hardly used a command line environment before, you might want to go review this more thorough tutorial:
-http://swcarpentry.github.io/shell-novice/index.html ---this page is more of a collection of pointers, discussion of common tasks and mistakes, and resources.
+**But with great power comes great bullshittery**. Commands and their options can be [terse, inconsistent, and difficult to learn](http://www.pgbovine.net/command-line-bullshittery.htm). A steep learning curve often prevents novices from enjoying the eventual payoff. If you've hardly used a command line environment before, you might want to go review this more thorough tutorial:
+[software carpentry: shell-novice](http://swcarpentry.github.io/shell-novice/index.html)---this page is more of a discussion of common tasks and mistakes, advanced topics, and resources.
 
 You may also want to reference the online book, [the Unix Workbench](https://seankross.com/the-unix-workbench/).
-
-### Command Line Fu
-
-A list of command line examples for interesting tasks:  
-http://www.commandlinefu.com/commands/browse
-
-Create a graphical directory tree from your current directory.
-```
-ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
-```
-
-### Explain shell
-
-What does `tar -zxvf ph.tar.gz` do?
-
-http://explainshell.com/explain?cmd=tar+-zxvf
-
-![image](https://cloud.githubusercontent.com/assets/742934/15635713/8fc9cf7e-25b4-11e6-957e-0bb03756b9fb.png)
-
-### Bite Size Command Line Zine
-
-You might find Julia Evan's zine useful: [Bite Size Command Line!](https://jvns.ca/blog/2018/08/05/new-zine--bite-size-command-line/).
-
-Here is an example for the `lsof` command. More examples can be found [here](https://twitter.com/i/moments/1026078161115729920).
-
-![lsof](https://pbs.twimg.com/media/DjFb_FPX4AAOwpa?format=jpg&name=medium)
 
 ## Shell Basics
 
@@ -45,20 +19,35 @@ Depending on your operating system and desktop manager, you have many ways to op
 
 ### Accessing and Using Shells
 
-*Mac*: you can run the Terminal in Applications. 
+* **Mac**: you can run the Terminal in Applications and pin to your Dock.
+
+* **Windows**: You access a shell in several ways. You can right click on the Windows Icon in the Task Bar and open a terminal window. You can also type in the name of the shell program in the search bar (e.g., Cmd/Powershell). 
 
 *Tip*: IDES, such as VS Code provide easy access to a terminal (View ⇨ Terminal).
 
-##### Windows
 
-*Windows: Shell options*. In windows, you can use Cmd, Powershell, or emulated shells (Bash for Git, Bash with Linux Subsystem). A downside to using an emulated shell is that you may be limited in accessing other executables/environments on windows.
+### Privileged commands
 
-*Windows: Opening*. You access a shell in several ways. You can right click on the Windows Icon in the Task Bar and open a terminal window. You can type in the name of the shell program in the search bar (e.g., Cmd/Powershell). 
+Some commands require adminstrative or super user privileges.
 
-*Windows: Admin shell*. Some commands require adminstration privileges. If you need to run a command with admin, you must start a shell with admin privilege. There is typically an admin command shell available in the menu when right clicking the Windows Icon on the Task Bar. You can also get one from right clicking the Cmd executable in the search bar.
+* **Mac/Linux**: To access a privileged shell, you simply can run `su` or prepend a command with `sudo`. `sudo` will cache your password, typically for 5 minutes, after successfully running a command. To avoid typing a password at all, you may add your user to `/etc/sudoers`---note it is recommended you make changes to this file using the special utility: [visudo](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file).
 
-*Tip*: If opening up a cmd shell in admin mode, make sure you do not perform operations, such as `git clone` in your current directory (`C:\WINDOWS\system32`). Otherwise, you will be writing to a location that only admin will have access to which will make it difficult to run the commands/tasks you are intending on doing.
+* **Windows**. If you need to run a command with admin, you must start a shell with admin privilege. There is typically an admin command shell available in the menu when right clicking the Windows Icon on the Task Bar. You can also get one from right clicking the Cmd executable in the search bar.
 
+   *Tip*: If opening up a cmd shell in admin mode, make sure you do not perform operations, such as `git clone` in your current directory (`C:\WINDOWS\system32`). Otherwise, you will be writing to a location that only admin will have access to which will make it difficult to run the commands/tasks you are intending on doing.
+
+### Deciding on a Terminal/Shell for Windows
+
+In windows, you can use Cmd, Powershell, or emulated shells, such as Bash for Git, or Bash with Windows Linux Subsystem (WSL). 
+
+`Cmd` is tried and true, and if you [made windows awesome](setup/configure-shell.md), will mostly what you want to do. The downsides are that interactions such as copy/paste are a little clunky. However, if open up a terminal with Cmd through Code, then this problem is mostly eliminated. `Powershell` is a powerful shell, with great scripting support. However, the syntax is esoteric and inconsistent with any other shell you may use. For example, running common linux commands like `cd ~ && ls` does not work in Powershell.
+
+Enumlated shells are useful for getting a _linux-like_ experience in Windows. Unfortunately, there are **many downsides to using emulated shells**. One downside is that you may be limited in accessing other executables/environments on windows. 
+For example, with `WSL`, you are actually running commands inside a small virtual machine, which limits your ability to run commands from windows. In general, using `WSL`, will turn on Hyper-V, which essentially breaks virtualization for tools, such as VirtualBox. In `Git Bash`, node packages and environment settings you setup will not work as expected when running in Cmd/etc. Furthermore, you never truly escape Windows, for example, Windows style newline endings `'\r\n'` may exist in files you edit, which will break bash scripts. Another common problem is that when you install packages, you will often get libraries for linux binaries, which then will not work when running outside of the emulated shell.
+
+As a result, emulated shells seem helpful, but often create more problems than they solve.
+
+*Tip*: Personal recommendation---stick with `Cmd` for system installation, and use a virtual machine if you truly need a linux environment.
 
 ### Commands
 
@@ -92,72 +81,72 @@ command1 || command2  # do command2 only if command1 fails
 command1 && command2  # do command2 only if command1 succeeds
 ```
 
-Note: In Windows, `;` does not work in Cmd, but does in Powershell. Use `&&` for the most portable operation.
+*Note*: In Windows, `;` does not work in Cmd, but does in Powershell. Use `&&` for the most portable operation.
+
+Try running this command that combines these shell commands.
+
+```bash|{type: 'command'}
+echo "Hello World" > shells-test.txt && cat shells-test.txt
+```
+
+Now, try using the `||` operator. 
+
+```bash|{type: 'command', }
+cat shells-test.txt || echo "backup plan"
+```
+
+See what happens in this case.
+
+```bash|{type: 'command', failed_when: "!stdout.includes('backup plan')"}
+cat filedoesnotexist.txt || echo "backup plan"
+```
 
 ##### Command I/O
 
-The UNIX shell commands push data from sources through filters along pipes. In a shell there are three sources of I/O: standard input (stdin), standard output (stout), and standard error (sterr). Standard error is a specialized version of standard out, so we'll focus on standard in and standard out.  The default for standard in is the keyboard and the default for standard out is to print to the shell (or console).
+The UNIX shell commands push data from sources through filters along pipes. Normally, each command runs as a process and reads and writes data the following way:
 
-Pipes and redirects change standard in and standard out from defaults.
+* **Standard input (stdin)**: get information from keyboard.
+* **Standard output (stdout)**: write information as output to console.
+* **Standard error (stderr)**: write error information as output to console.
+
+Pipes and redirects change stdin and stdout from default sources. For example, we can change the stdin of a process to be piped from the output of another process. Or rather than printing to the console, we can get a process to write to a file.
 
 ```bash
 command              # default standard in and standard out
 command < inputFile  # redirect of inputFile contents to command as standard in
 command > outputFile # redirect command output to outputFile as standard out
 command1 | command2  # pipes output of command1 as standard in to command2
-command &            # run in background, typically used for applications
 ```
 
-A neat trick: Command the value of a file into your clipboard!
+**Neat trick**: Copy the value of a file into your clipboard!
 
 Windows: `clip < file.txt` Mac: `pbcopy < file.txt` 
 
-## Activity: Customizing Your Shell
-
-In bash, the environment variable, `PS1`, will contain the text that gets displayed by your prompt, which normally might look like `$ `. For example, setting `PS1="box > "`, will look like this.
-
-```
-box > ▒
-``` 
-
-Of course, more advanced options are [available], through escape code such as these, and even conditional logic and bash commands (by setting another variable `PROMPT_COMMAND`):
-
-* `\H`: the hostname
-* `\u`: the user name
-* `PROMPT_COMMAND="echo -n [$(date +%H:%M)]"`: Print the date in hours and minutes.
-
-Create a local configuration file named `.bash_prompt`:
-```bash
-PROMPT_COMMAND='PS1="\[\033[0;33m\][\!]\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`[\u.\h: \`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\`]\$\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"'
+```bash|{type:'command', platform: 'darwin'}
+pbcopy < ~/.ssh/id_rsa
 ```
 
-Then enable your new prompt with:
-
+```bash|{type:'command', platform: 'win32'}
+clip < %HOME%/.ssh/id_rsa
 ```
-source .bash_prompt
-```
-
-Try running a simple command, like `ls`. Notice the green prompt. Now try running a non-existing command, such as `foo`. Notice the red prompt.
-
-**Exercise**: Customize your bash prompt. Use a google search, reference [articles](https://www.maketecheasier.com/8-useful-and-interesting-bash-prompts/), or search on GitHub for "dotfiles" as a source for inspiration.
 
 ## Activity: Data Wrangling with bash
 
 Download data with `wget`.
 
-```bash
-wget -nc https://s3-us-west-2.amazonaws.com/producthunt-downloads/ph-export--2016-04-01.tar.gz
+```bash|{type:'command', stream: true}
+wget -nc https://s3-us-west-2.amazonaws.com/producthunt-downloads/ph-export--2016-04-01.tar.gz --show-progress --progress=bar:force 2>&1
 ```
 
 Create a directory to store the tar file contents
 
-```
+```bash|{type:'command'}
 mkdir product-hunt 
 ```
 
 Extract the archive and verify csv files exist inside the product-hunt folder.
 
-```bash
+```bash|{type:'command'}
 tar -zxvf ph-export--2016-04-01.tar.gz -C product-hunt/
 ls product-hunt/
 ```
@@ -166,25 +155,62 @@ Data wrangling.
 
 List the column headers inside the "users.*.csv" file
 
-```bash
+```bash|{type:'command'}
 head -n 1 product-hunt/users--2016-04-01_14-36-26-UTC.csv
 ```
 
-Extract a column of text from a file, using `cut`.
+Extract a column of text from a file, using `cut`, skip over first line with `tail`, and then preview first 10 rows with `head`.
 
-```bash
-cut -f 2 -d ';' product-hunt/posts*.csv | head
+```bash|{type:'command'}
+cut -f 4 -d ';' product-hunt/users*.csv | tail -n +2 | head 
 ```
 
-#### Exercise
+*Note*: You may notice an error from this last command (`exit code: 141`) or a "write error" message in stderr. This is normal and expected behavior. After processing the first 10 lines of text, `head` will terminate, meaning that output that the previous commands was sending was suddenly closed, resulting in a `SIGPIPE`. If we wanted to make sure that we only received the contents of the file, and not stray warnings, we could redirect only stdout by using `1>`. 
 
-Using a combination of `cut`, `wc`, `head`, `tail`, `grep`, `sort`, `uniq`, pipes (`|`) and any other unix suitable commands, create a command that calculates the following. For each task, save the answers results in a file named, `data-a1.txt`, `data--a2.txt`, and so on...
+Similiarly, we could ignore any warning output by redirecting stderr into `/dev/null` or `NUL` in **Windows**: 
 
-* Count the number of columns inside the "users.*.csv" file. [data-a1.txt]
-* Count the number of times "bitcoin" is referenced inside a the post's file "tagline" column. [data-a2.txt]
-* Find the row of post with the highest number of upvotes. [data-a3.txt]
+```bash|{type:'command', platform: 'win32'}
+cut -f 4 -d ';' product-hunt/users*.csv 2> NUL | tail -n +2 2> NUL | head 
+```
 
-Verify answers with `opunit verify local`.
+In bash, if we wanted to know the exit code of different parts of the command chain, we could get an array of exit codes using `echo ${PIPESTATUS[@]}`. Finally, we can toggle this behavior by setting `set -o pipefail` to turn pipe failure _on_, and `set +o pipefail` to turn it _off_.
+
+In bash:
+```bash|{type:'command', shell: 'bash'}
+set +o pipefail
+cut -f 4 -d ';' product-hunt/users*.csv | tail -n +2 | head 
+echo "Exit codes: ${PIPESTATUS[@]}"
+```
+
+#### Exercise: Data Science with Bash
+
+Using a combination of `cut`, `wc`, `head`, `tail`, `grep`, `sort`, `uniq`, pipes (`|`) and any other unix suitable commands, create a command that calculates the following.
+
+**Extend the following commands** to try to accomplish each task:
+
+1. Count the number of columns inside the "users.*.csv" file.
+
+```bash|{type:'command', shell: 'bash', failed_when:"!stdout.includes('14')"}
+head -n 1 product-hunt/users--2016-04-01_14-36-26-UTC.csv | tr ';' '\n'
+```
+
+2. Count the number of times "bitcoin" is referenced inside a the post's file "tagline" column. Tagline is the 4th column.
+
+```bash|{type:'command', shell: 'bash', failed_when:"!stdout.includes('42')"}
+cut -f 4 -d ';' product-hunt/posts--*.csv | head
+```
+
+3. Find the row of post with the highest number of votes (`votes_count`, 7th column).
+
+```bash|{type:'command', shell: 'bash', failed_when:"!stdout.includes('Startup Stash;A curated directory of 400 resources & tools for startups')"}
+# 
+```
+
+*Warning*: While this can be useful for quick and dirty analysis, for more serious processing, you will want to use a more robust csv parser. For example, using `awk` to count the number of fields (NF) seperated by `;`, we can see, that some data may be incorrect. This is because quoted semi-columns are not being escaped by the bash commands.
+
+```bash|{type:'command', shell: 'bash', failed_when:"!stdout.includes('14')"}
+awk -F';' '{print NF}' product-hunt/users--2016-04-01_14-36-26-UTC.csv | sort | uniq
+```
 
 ## Environment Variables
 
@@ -201,10 +227,9 @@ In addition to editing environment variables in your desktop manager GUI, you ca
 
 In Windows, you can use `set` and `setx` to update environment variables. `set` will update environment variables in your current shell instance, but that will be lost after the shell closes. Using `setx`, you can permanently, set an environment variable for the user or system (use `setx /m`). See the [documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) for more information.
 
-```
-C:\Users\chris>set DEBUG_MODE=true
-C:\Users\chris>echo %DEBUG_MODE%
-true
+```bash|{type:'command'}
+set DEBUG_MODE=true
+echo "Current DEBUG_MODE=%DEBUG_MODE%"
 ```
 
 Tip: One limitation of using setx is that it cannot store values longer than 1024 characters.
@@ -213,23 +238,31 @@ Tip: One limitation of using setx is that it cannot store values longer than 102
 
 In bash/*sh environments, you can set temporary environment variables in two ways:
 
-Like `set`, you can define a variable just for your shell session:
-```
-$ DEBUG_MODE=true
-$ echo $DEBUG_MODE
-true
+Like `set`, you can define a variable just for your shell session, but not for running programs.
+
+```bash|{type:'command'}
+DEBUG_MODE=true
+echo $DEBUG_MODE
+node -e 'console.log(`DEBUG_MODE=${process.env.DEBUG_MODE}`);'
 ```
 
 ##### Scoping
 
-You can also define a variable that will only exist inside a subprocess  spawned from the shell. This may not behave the way you expect!
-```
-$ BUG_TEST=true echo $BUG_TEST
+You can also define a variable that will only exist inside a subprocess spawned from the shell. **This may not behave the way you expect**!
 
+```bash|{type:'command', shell:"bash"}
+DEBUG_MODE=true echo "DEBUG_MODE=$DEBUG_MODE"
+DEBUG_MODE=true node -e 'console.log(`DEBUG_MODE=${process.env.DEBUG_MODE}`);'
 ```
-A blank is printed out because `$BUG_TEST` is expanded before the process executing the echo command is started. On the other hand, if you had code that checked for `BUG_TEST` while running, it would contain `true`.
+A blank is printed out because `$DEBUG_MODE` is expanded before the process executing the echo command is started. On the other hand, inside the node program, the process inherits the shell's environment variables, including the DEBUG_MODE variable.
 
 Finally, you can enable access to an environment variable for all processes and subprocesses started in the shell by using `export VAR=VALUE`
+
+```bash|{type:'command'}
+export DEBUG_MODE=true
+echo $DEBUG_MODE
+node -e 'console.log(`DEBUG_MODE=${process.env.DEBUG_MODE}`);'
+```
 
 > *Permenant environment variables are actually more tricky in Mac/Linux shells!*
 
@@ -275,11 +308,9 @@ $e
 echo "result is: $e"
 ```
 
-**Activity**: Imagine you wanted to write a "dead" startup checker using the product hunt data. Using the script below, you would be able check if a startup's url was still alive.
+**Activity**: Imagine you wanted to write a "dead" startup checker using the product hunt data. Using the script below, you would be able check if a startup's url was still alive. Create an executable file called 'checker.sh', that is `chmod +x checker.sh`.
 
-Save this in a file called `checker.sh`:
-
-```bash
+```bash|{type: 'file', path: 'checker.sh', permission: '+x', range: {start:3, end: 6}}
 #!/bin/bash
 
 # Print error message and exit with error code 1
@@ -321,15 +352,9 @@ while read -r line; do
 done <<< "$RESULTS"
 ```
 
-Make sure the script file is executable:
-
-```bash
-chmod +x checker.sh
-```
-
 Run the script:
 
-```bash
+```bash|{type:'command', shell: 'bash'}
 ./checker.sh product-hunt/posts--2016-04-01_14-36-24-UTC.csv 3
 ```
 
@@ -344,15 +369,15 @@ Captain Strike (💀): http://www.producthunt.com/l/45fad46fe3f810 => 404
 
 **Exercise**: Try running the script with a larger number of posts to check. How did it go?
 
-**Exercise**: Go throught the script line-by-line by a partner. Do you understand what each line is doing?
+**Exercise**: Go through the script line-by-line with a partner. Do you understand what each line is doing? Which ones are confusing?
 
 ## Weird but useful features and commands in bash
 
 ### Heredoc
 
-In some situations, you might need to send multi-line content as input to a command or to store as a file. `heredoc` is an input mechanism that allows you to enter in text (interactively or in a script), until a delimiter string is reached ('END_DOC'). 
+In some situations, you might need to send multi-line content as input to a command or to store as a file. `heredoc` is an input mechanism that allows you to enter in text (interactively or in a script), until a delimiter string is reached `'END_DOC'`.  The single quotes in the heredoc marker is important---that will make sure your script commands are properly escaped.
 
-```bash
+```bash|{type:'command', shell: 'bash'}
 cat << 'END_DOC' > .functions
 mostUsed()
 {
@@ -363,19 +388,23 @@ END_DOC
 
 Load the defined function. Then we can see which command you run the most.
 
-```bash
+```bash|{type:'command', shell: 'bash'}
 source .functions
 mostUsed
 ```
 
-Heredoc can also be useful for running command on input you'd like to type in manually or paste from your clipboard and don't want to bother placing in a file:
+Heredoc can also be useful for running command on input you'd like to type in manually or paste from your clipboard and don't want to bother placing in a file. In this case, we can omit the single quotes for our heredoc marker `EOF`, since we're only processing simple text without bash commands.
 
 
-Count the number of words and characters in text:
+Count the number of lines, words, and characters in text:
 
-```
+```bash|{type:'command', shell: 'bash'}
 cat << EOF | wc
-Lieutenant-General Sir Adrian Paul Ghislain Carton de Wiart (5 May 1880 – 5 June 1963), was a British Army officer of Belgian and Irish descent. He fought in the Boer War, World War I, and World War II, was shot in the face, head, stomach, ankle, leg, hip and ear, survived a plane crash, tunneled out of a POW camp, and bit off his own fingers when a doctor wouldn’t amputate them. He later said "frankly I had enjoyed the war."
+Lieutenant-General Sir Adrian Paul Ghislain Carton de Wiart (5 May 1880 – 5 June 1963), 
+was a British Army officer of Belgian and Irish descent. He fought in the Boer War, World War I, and World War II, 
+was shot in the face, head, stomach, ankle, leg, hip and ear, survived a plane crash, tunneled out of a POW camp, 
+and bit off his own fingers when a doctor wouldn’t amputate them. 
+He later said "frankly I had enjoyed the war."
 EOF
 ```
 
@@ -385,13 +414,13 @@ EOF
 
 Create a 1MB file with zeros.
 
-```bash
+```bash|{type:'command', failed_when:'exitCode!=0'}
 dd if=/dev/zero of=zeros.txt count=1024 bs=1024
 ```
 
 Create a 20K file with random bytes.
 
-```bash
+```bash|{type:'command', failed_when:'exitCode!=0'}
 dd if=/dev/urandom of=random.txt bs=2048 count=10
 ```
 
@@ -405,7 +434,9 @@ Just as a simple example, if you ran this code `python -c "print( input('Enter v
 
 By using expect, you can create scripts that automatically response to prompt inputs.
 
-```bash
+Warning: `expect` is not directly available on Windows.
+
+```bash|{type:'command', shell: 'bash'}
 expect <<- END
     spawn python -c "print( input('Enter value: ') )"
     expect {
@@ -421,9 +452,18 @@ Expect is pretty tricky to learn how to use properly, but it is a nice trick to 
 
 Using traps for [resource cleanup](http://redsymbol.net/articles/bash-exit-traps/), or implementing a singleton process.
 
+
+
+
+
+Install simple server.
+```bash|{type: 'command'}
+npm install http-server -g
+```
+
 Save the following in 'server.sh' and make it executable.
 
-```
+```bash|{type: 'file', path: 'server.sh', permission: '+x'}
 #!/bin/bash
 
 LOCKFILE=510-bash.lock
@@ -440,28 +480,53 @@ function cleanup
 }
 
 # Initiate the trap
-trap cleanup EXIT
+trap cleanup EXIT SIGINT
 
 # Create lockfile
 touch $LOCKFILE
 
-# Program (listen on port 5100)
-nc -k -l 5100 | bash
+# Simple web server (listen on port 8888)
+# while true; do { echo -e "HTTP/1.1 200 OK\n\n$(date)"; } | nc -l 8888; done
+http-server -p 8888
 ```
 
-This will run a simple bash server that you can send commands to over the network.
+This will run a simple webserver, spawned in its own process.
 
-```bash
+```bash|{type:'command', shell: 'bash', spawn: true}
 ./server.sh
 ```
 
-In a new terminal window, run:
+To see what's being served, in a new terminal window, run:
 
-```bash
-echo "ls" >/dev/tcp/127.0.0.1/5100
+```bash|{type:'command'}
+wget -qO- localhost:8888
 ```
 
-You should see your direct connects appear in your other terminal running the server process. If you try running `./server.sh` in another terminal, it should prevent you from running again.
+If you try running `./server.sh` in another terminal, it should prevent you from running again.
+
+```bash|{type:'command', shell: 'bash'}
+./server.sh
+```
+
+Let's stop our server (Windows): *Note*: this is a nice example where powershell's scripting powers come into good use.
+```bash|{type:'command', platform: 'win32', shell: 'powershell'}
+Get-CimInstance Win32_Process -Filter "CommandLine LIKE '%http-server%'" | Remove-CimInstance
+```
+
+Let's stop our server (Mac/Linux)
+```bash|{type:'command'}
+pkill -f 'http-server'
+```
+
+Let's confirm lock file is removed:
+
+```bash|{type:'command'}
+test -f 510-bash.lock && echo "file exists." && exit 1 || echo "file is gone."
+```
+
+
+
+
 
 ## Remote connections
 
@@ -477,14 +542,9 @@ ssh vagrant@192.168.33.10 sudo apt-get update && sudo apt-get install nodejs -y
 
 **Persistance**: If you need to change directories, you will need to do it in the same command: `cd App/ && cmd`.
 
-Otherwise, your next command will start back in the same original directory.
-
-More specifically, ssh can operate in a `shell`, `exec`, or `subsystem` [channels](https://stackoverflow.com/questions/6770206/what-is-the-difference-between-the-shell-channel-and-the-exec-channel-in-jsc). When using a shell channel, you can interactively send commands like a normal shell. A cd operation will persist. 
-
-Because you're sending commands over ssh, this is done in `exec` mode. In exec mode, each command will be executed in its own context and lose many of the shell's functionality.
+Otherwise, your next command will start back in the same original directory. Because you're sending commands over ssh, this is done in `exec` mode. In exec mode, each command will be executed in its own context and lose many of the shell's functionality. ssh can operate in a `shell`, `exec`, or `subsystem` [channels](https://stackoverflow.com/questions/6770206/what-is-the-difference-between-the-shell-channel-and-the-exec-channel-in-jsc). When using a shell channel, you can interactively send commands like a normal shell. A cd operation will persist in this case. 
 
 Finally, you can emulate some parts of a terminal using `-t or -tt` as well as combining with heredoc to input a multi-line script.
-
 
 ### tmux
 
@@ -507,3 +567,31 @@ Here is a useful [reference](http://hyperpolyglot.org/multiplexers).
 | send multiplexer command to session _foo_ |	`$ screen -r foo -X command` |	`$ tmux command -t foo` |
 | run `ls` in session _foo_	 | `$ screen -r foo -X stuff "ls $(echo -ne '\015')"`	| `$ tmux send-keys -t foo 'ls' C-m` |
 | run `vi` in new window	| `$ screen vi /etc/motd`	| `$ tmux new-window vi /etc/motd` |
+
+## Resources
+
+### Bite Size Command Line Zine
+
+You might find Julia Evan's zine useful: [Bite Size Command Line!](https://jvns.ca/blog/2018/08/05/new-zine--bite-size-command-line/).
+
+Here is an example for the `lsof` command. More examples can be found [here](https://twitter.com/i/moments/1026078161115729920).
+
+![lsof](https://pbs.twimg.com/media/DjFb_FPX4AAOwpa?format=jpg&name=medium)
+
+### Command Line Fu
+
+A list of command line examples for interesting tasks:  
+http://www.commandlinefu.com/commands/browse
+
+Create a graphical directory tree from your current directory.
+```
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
+```
+
+### Explain shell
+
+What does `tar -zxvf ph.tar.gz` do?
+
+http://explainshell.com/explain?cmd=tar+-zxvf
+
+![image](https://cloud.githubusercontent.com/assets/742934/15635713/8fc9cf7e-25b4-11e6-957e-0bb03756b9fb.png)
