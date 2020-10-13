@@ -2,7 +2,7 @@
 
 # Engineering Basics
 
-<a href="docable://github.com/chrisparnin/EngineeringBasics"><img src="resources/imgs/download.png"> Import into Docable</a>
+<a href="http://docable.cloud:3030/"><img src="resources/imgs/download.png"> Import into Docable</a>
 
 In this workshop, you will setup a local (or virtual environment) consisting of several tools, programming languages, and libraries, to support software engineering work.  You will also practice workflows needed to be productive in software engineering.
 
