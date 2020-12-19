@@ -10,7 +10,7 @@ To import this content for use in [docable-notebooks](https://github.com/ottomat
 docable-server import https://github.com/chrisparnin/EngineeringBasics
 ```
 
-You should be able to see the content inside docable at `chrisparnin/EngineeringBasics`.
+You should be able to see the content inside the docable homepage at `chrisparnin/EngineeringBasics`.
 
 ## Overview 
 
