@@ -23,17 +23,17 @@ See *closed* issues: https://github.com/alt-code/AutoSpark/issues?q=is%3Aissue+i
 * You can assign multiple people as an owner of issue.
 * You can reply to a comment on an issue via email. Great way to discuss with others even on phone.
 
-## Trello
+## Kanban Boards
 
-[Trello](https://trello.com/) is a planning tool that is inspired from kanban and agile methods.
+Tools such as [Trello](https://trello.com/) and [GitHub Projects](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-project-boards) serve as a planning tool that support kanban and agile methods.
 
-In kanban, you have a “visual” pipeline for transitioning ideas into a delivered product. In trello, you can move a card (often representing a task) between lists.
+![Project Board](https://miro.medium.com/max/4976/1*_St3BrB36V05JAuFIC3utQ.png)
 
 ### Boards, Lists, Cards
 
 ![image](https://cloud.githubusercontent.com/assets/742934/15636941/eb418154-25db-11e6-9814-5a3c835c0c11.png)
 
-Trello allows you to create boards.  On those boards, you can create lists.  Lists can be used to hold cards.
+In kanban, you have a “visual” pipeline for transitioning ideas into a delivered product. With these tools, you can move a card (often representing a task) between lists, which are on a single board.
 
 Recommended Pipeline:
 
@@ -54,7 +54,7 @@ It is recommended that you break tasks down into 2--4 hour chunks.
 * Too many things
 * Items sticking around not making progress.
 
-Instead of saying "Do analysis" => "Find R package for doing peak detection". This is more concrete and actionable.
+Instead of saying "Do analysis" => a more suitable task might be "Find R package for doing peak detection". This is more concrete and actionable.
 
 ## Scrum
 
@@ -68,9 +68,6 @@ The main things covered in a scrum:
 
 ## Practice: Set up a Task List and Trello Board
 
-In your Project0 repo.
+1. **Create a new issue** related to your progress on this workshop. If you've checked off everything, then you should have mastered a great set of foundational skills preparing your for real software engineering work!
 
-1. **Create a new issue** related to your progress on this workshop. To create the issue, you can borrow the checklist from the README.md and modify it to work for you. If you've checked off everything, then you should have mastered a great set of foundational skills preparing your for real software engineering work!
-
-2. **Create a personal Trello board** for this semester. What tasks should you be working on? Alternatively, you can play with a similiar tool: [GitHub project boards](https://help.github.com/articles/about-project-boards/).
-
+2. **Create a GitHub Project board**. You can use it to practice thinking about what tasks should you be working on.
