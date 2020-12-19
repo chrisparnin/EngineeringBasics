@@ -2,6 +2,18 @@
 
 # Engineering Basics
 
+## Getting Started
+
+To import this content for use in [docable-notebooks](https://github.com/ottomatica/docable-notebooks), run the following command in a terminal:
+
+```bash
+docable-server import https://github.com/chrisparnin/EngineeringBasics
+```
+
+You should be able to see the content inside docable at `chrisparnin/EngineeringBasics`.
+
+## Overview 
+
 In this workshop, you will setup a local (or virtual environment) consisting of several tools, programming languages, and libraries, to support software engineering work.  You will also practice workflows needed to be productive in software engineering.
 
 The primary goal of this workshop is for you have to have installed and learned a set of relevant tools (and processes in your head) for software development.
